@@ -1,0 +1,559 @@
+{
+    "nmap": {
+        "command_line": "nmap -oX - -sS -sU -F 192.168.1.194-255",
+        "scanstats": {
+            "totalhosts": "62",
+            "elapsed": "177.30",
+            "timestr": "Tue Sep 29 20:02:59 2020",
+            "downhosts": "55",
+            "uphosts": "7"
+        },
+        "scaninfo": {
+            "udp": {
+                "method": "udp",
+                "services": "7,9,17,19,49,53,67-69,80,88,111,120,123,135-139,158,161-162,177,427,443,445,497,500,514-515,518,520,593,623,626,631,996-999,1022-1023,1025-1030,1433-1434,1645-1646,1701,1718-1719,1812-1813,1900,2000,2048-2049,2222-2223,3283,3456,3703,4444,4500,5000,5060,5353,5632,9200,10000,17185,20031,30718,31337,32768-32769,32771,32815,33281,49152-49154,49156,49181-49182,49185-49186,49188,49190-49194,49200-49201,65024"
+            },
+            "tcp": {
+                "method": "syn",
+                "services": "7,9,13,21-23,25-26,37,53,79-81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2000-2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5060,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"
+            }
+        }
+    },
+    "scan": {
+        "192.168.1.200": {
+            "udp": {
+                "161": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "udp-response",
+                    "name": "snmp",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                },
+                "67": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "port-unreach",
+                    "name": "dhcps",
+                    "conf": "3",
+                    "version": "",
+                    "state": "closed"
+                },
+                "68": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "port-unreach",
+                    "name": "dhcpc",
+                    "conf": "3",
+                    "version": "",
+                    "state": "closed"
+                },
+                "427": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "udp-response",
+                    "name": "svrloc",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                },
+                "623": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "udp-response",
+                    "name": "asf-rmcp",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "80": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "syn-ack",
+                    "name": "http",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                },
+                "443": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "syn-ack",
+                    "name": "https",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                },
+                "21": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "reset",
+                    "name": "ftp",
+                    "conf": "3",
+                    "version": "",
+                    "state": "closed"
+                },
+                "22": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "syn-ack",
+                    "name": "ssh",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                },
+                "23": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "syn-ack",
+                    "name": "telnet",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                },
+                "427": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "syn-ack",
+                    "name": "svrloc",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                },
+                "5900": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "syn-ack",
+                    "name": "vnc",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                },
+                "3389": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "syn-ack",
+                    "name": "ms-wbt-server",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                }
+            },
+            "vendor": {
+                "DC:FE:07:28:21:FE": "Pegatron"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "DC:FE:07:28:21:FE",
+                "ipv4": "192.168.1.200"
+            }
+        },
+        "192.168.1.194": {
+            "udp": {
+                "5353": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "no-response",
+                    "name": "zeroconf",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open|filtered"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "8000": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "no-response",
+                    "name": "http-alt",
+                    "conf": "3",
+                    "version": "",
+                    "state": "filtered"
+                }
+            },
+            "vendor": {},
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "CE:E0:39:1F:31:31",
+                "ipv4": "192.168.1.194"
+            }
+        },
+        "192.168.1.207": {
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "BC:46:99:76:C6:AE",
+                "ipv4": "192.168.1.207"
+            },
+            "vendor": {
+                "BC:46:99:76:C6:AE": "Tp-link Technologies"
+            }
+        },
+        "192.168.1.219": {
+            "udp": {
+                "500": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "no-response",
+                    "name": "isakmp",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open|filtered"
+                },
+                "4500": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "no-response",
+                    "name": "nat-t-ike",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open|filtered"
+                },
+                "137": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "udp-response",
+                    "name": "netbios-ns",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                },
+                "138": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "no-response",
+                    "name": "netbios-dgm",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open|filtered"
+                },
+                "5353": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "no-response",
+                    "name": "zeroconf",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open|filtered"
+                },
+                "1900": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "no-response",
+                    "name": "upnp",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open|filtered"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "5357": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "syn-ack",
+                    "name": "wsdapi",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                },
+                "3306": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "syn-ack",
+                    "name": "mysql",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                },
+                "139": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "syn-ack",
+                    "name": "netbios-ssn",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                },
+                "445": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "syn-ack",
+                    "name": "microsoft-ds",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                },
+                "135": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "syn-ack",
+                    "name": "msrpc",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                }
+            },
+            "vendor": {
+                "70:85:C2:7C:7E:64": "ASRock Incorporation"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "70:85:C2:7C:7E:64",
+                "ipv4": "192.168.1.219"
+            }
+        },
+        "192.168.1.201": {
+            "udp": {
+                "5353": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "udp-response",
+                    "name": "zeroconf",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                },
+                "111": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "udp-response",
+                    "name": "rpcbind",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "22": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "syn-ack",
+                    "name": "ssh",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                },
+                "111": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "syn-ack",
+                    "name": "rpcbind",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                }
+            },
+            "vendor": {
+                "48:5B:39:C5:3F:37": "Asustek Computer"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "48:5B:39:C5:3F:37",
+                "ipv4": "192.168.1.201"
+            }
+        },
+        "192.168.1.203": {
+            "udp": {
+                "5353": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "udp-response",
+                    "name": "zeroconf",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                },
+                "111": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "udp-response",
+                    "name": "rpcbind",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "22": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "syn-ack",
+                    "name": "ssh",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                },
+                "111": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "syn-ack",
+                    "name": "rpcbind",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                }
+            },
+            "vendor": {
+                "48:5B:39:C2:7E:5A": "Asustek Computer"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "48:5B:39:C2:7E:5A",
+                "ipv4": "192.168.1.203"
+            }
+        },
+        "192.168.1.202": {
+            "udp": {
+                "5353": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "udp-response",
+                    "name": "zeroconf",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                },
+                "111": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "udp-response",
+                    "name": "rpcbind",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "22": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "syn-ack",
+                    "name": "ssh",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                },
+                "111": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "syn-ack",
+                    "name": "rpcbind",
+                    "conf": "3",
+                    "version": "",
+                    "state": "open"
+                }
+            },
+            "vendor": {
+                "48:5B:39:C5:3E:A3": "Asustek Computer"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "48:5B:39:C5:3E:A3",
+                "ipv4": "192.168.1.202"
+            }
+        }
+    }
+}

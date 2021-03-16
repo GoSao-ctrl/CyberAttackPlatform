@@ -1,0 +1,373 @@
+{
+    "nmap": {
+        "command_line": "nmap -oX - -sn 192.168.1.1-255",
+        "scaninfo": {},
+        "scanstats": {
+            "elapsed": "6.40",
+            "downhosts": "236",
+            "timestr": "Sat Oct 10 12:37:25 2020",
+            "totalhosts": "255",
+            "uphosts": "19"
+        }
+    },
+    "scan": {
+        "192.168.1.212": {
+            "vendor": {
+                "70:C9:4E:C2:5C:D9": "Liteon Technology"
+            },
+            "status": {
+                "state": "up",
+                "reason": "arp-response"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "ipv4": "192.168.1.212",
+                "mac": "70:C9:4E:C2:5C:D9"
+            }
+        },
+        "192.168.1.191": {
+            "vendor": {
+                "C8:1F:66:F8:9C:58": "Dell"
+            },
+            "status": {
+                "state": "up",
+                "reason": "arp-response"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "ipv4": "192.168.1.191",
+                "mac": "C8:1F:66:F8:9C:58"
+            }
+        },
+        "192.168.1.182": {
+            "vendor": {
+                "54:9F:35:11:25:5E": "Dell"
+            },
+            "status": {
+                "state": "up",
+                "reason": "arp-response"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "ipv4": "192.168.1.182",
+                "mac": "54:9F:35:11:25:5E"
+            }
+        },
+        "192.168.1.202": {
+            "vendor": {
+                "48:5B:39:C5:3E:A3": "Asustek Computer"
+            },
+            "status": {
+                "state": "up",
+                "reason": "arp-response"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "ipv4": "192.168.1.202",
+                "mac": "48:5B:39:C5:3E:A3"
+            }
+        },
+        "192.168.1.203": {
+            "vendor": {
+                "48:5B:39:C2:7E:5A": "Asustek Computer"
+            },
+            "status": {
+                "state": "up",
+                "reason": "arp-response"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "ipv4": "192.168.1.203",
+                "mac": "48:5B:39:C2:7E:5A"
+            }
+        },
+        "192.168.1.200": {
+            "vendor": {
+                "DC:FE:07:28:21:FE": "Pegatron"
+            },
+            "status": {
+                "state": "up",
+                "reason": "arp-response"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "ipv4": "192.168.1.200",
+                "mac": "DC:FE:07:28:21:FE"
+            }
+        },
+        "192.168.1.114": {
+            "vendor": {
+                "00:0C:29:9C:72:06": "VMware"
+            },
+            "status": {
+                "state": "up",
+                "reason": "arp-response"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "ipv4": "192.168.1.114",
+                "mac": "00:0C:29:9C:72:06"
+            }
+        },
+        "192.168.1.177": {
+            "vendor": {
+                "00:E1:8C:B5:61:25": "Intel Corporate"
+            },
+            "status": {
+                "state": "up",
+                "reason": "arp-response"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "ipv4": "192.168.1.177",
+                "mac": "00:E1:8C:B5:61:25"
+            }
+        },
+        "192.168.1.148": {
+            "vendor": {
+                "70:85:C2:7C:7F:50": "ASRock Incorporation"
+            },
+            "status": {
+                "state": "up",
+                "reason": "arp-response"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "ipv4": "192.168.1.148",
+                "mac": "70:85:C2:7C:7F:50"
+            }
+        },
+        "192.168.1.1": {
+            "vendor": {
+                "94:D9:B3:28:F5:97": "Tp-link Technologies"
+            },
+            "status": {
+                "state": "up",
+                "reason": "arp-response"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "ipv4": "192.168.1.1",
+                "mac": "94:D9:B3:28:F5:97"
+            }
+        },
+        "192.168.1.201": {
+            "vendor": {
+                "48:5B:39:C5:3F:37": "Asustek Computer"
+            },
+            "status": {
+                "state": "up",
+                "reason": "arp-response"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "ipv4": "192.168.1.201",
+                "mac": "48:5B:39:C5:3F:37"
+            }
+        },
+        "192.168.1.207": {
+            "vendor": {
+                "BC:46:99:76:C6:AE": "Tp-link Technologies"
+            },
+            "status": {
+                "state": "up",
+                "reason": "arp-response"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "ipv4": "192.168.1.207",
+                "mac": "BC:46:99:76:C6:AE"
+            }
+        },
+        "192.168.1.193": {
+            "vendor": {
+                "40:31:3C:CC:36:C4": "Xiaomi Electronics,co."
+            },
+            "status": {
+                "state": "up",
+                "reason": "arp-response"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "ipv4": "192.168.1.193",
+                "mac": "40:31:3C:CC:36:C4"
+            }
+        },
+        "192.168.1.162": {
+            "vendor": {
+                "70:85:C2:7C:82:38": "ASRock Incorporation"
+            },
+            "status": {
+                "state": "up",
+                "reason": "arp-response"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "ipv4": "192.168.1.162",
+                "mac": "70:85:C2:7C:82:38"
+            }
+        },
+        "192.168.1.118": {
+            "vendor": {},
+            "status": {
+                "state": "up",
+                "reason": "localhost-response"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "ipv4": "192.168.1.118"
+            }
+        },
+        "192.168.1.115": {
+            "vendor": {
+                "00:0C:29:EF:F2:E4": "VMware"
+            },
+            "status": {
+                "state": "up",
+                "reason": "arp-response"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "ipv4": "192.168.1.115",
+                "mac": "00:0C:29:EF:F2:E4"
+            }
+        },
+        "192.168.1.219": {
+            "vendor": {
+                "70:85:C2:7C:7E:64": "ASRock Incorporation"
+            },
+            "status": {
+                "state": "up",
+                "reason": "arp-response"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "ipv4": "192.168.1.219",
+                "mac": "70:85:C2:7C:7E:64"
+            }
+        },
+        "192.168.1.117": {
+            "vendor": {
+                "EC:41:18:9C:61:94": "Xiaomi Electronics,co."
+            },
+            "status": {
+                "state": "up",
+                "reason": "arp-response"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "ipv4": "192.168.1.117",
+                "mac": "EC:41:18:9C:61:94"
+            }
+        },
+        "192.168.1.116": {
+            "vendor": {
+                "00:0C:29:17:94:27": "VMware"
+            },
+            "status": {
+                "state": "up",
+                "reason": "arp-response"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "ipv4": "192.168.1.116",
+                "mac": "00:0C:29:17:94:27"
+            }
+        }
+    }
+}

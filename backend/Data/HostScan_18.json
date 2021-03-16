@@ -1,0 +1,21 @@
+{
+    "nmap": {
+        "command_line": "nmap -oX - -sn 192.168.1.109-192.168.1.225",
+        "scanstats": {
+            "totalhosts": "0",
+            "elapsed": "0.29",
+            "timestr": "Tue Sep 29 19:17:33 2020",
+            "downhosts": "0",
+            "uphosts": "0"
+        },
+        "scaninfo": {
+            "warning": [
+                "WARNING: No targets were specified, so 0 hosts scanned.\r\n"
+            ],
+            "error": [
+                "Failed to resolve \"192.168.1.109-192.168.1.225\".\r\nWARNING: No targets were specified, so 0 hosts scanned.\r\n"
+            ]
+        }
+    },
+    "scan": {}
+}

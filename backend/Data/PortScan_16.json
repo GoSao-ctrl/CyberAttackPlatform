@@ -1,0 +1,67 @@
+{
+    "nmap": {
+        "command_line": "nmap -oX - -p 65535 -sS -sU 192.168.1.1",
+        "scanstats": {
+            "totalhosts": "1",
+            "elapsed": "1.78",
+            "timestr": "Tue Sep 29 19:18:22 2020",
+            "downhosts": "0",
+            "uphosts": "1"
+        },
+        "scaninfo": {
+            "udp": {
+                "method": "udp",
+                "services": "65535"
+            },
+            "tcp": {
+                "method": "syn",
+                "services": "65535"
+            }
+        }
+    },
+    "scan": {
+        "192.168.1.1": {
+            "udp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "port-unreach",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "closed"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "reset",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "closed"
+                }
+            },
+            "vendor": {
+                "94:D9:B3:28:F5:97": "Tp-link Technologies"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "94:D9:B3:28:F5:97",
+                "ipv4": "192.168.1.1"
+            }
+        }
+    }
+}

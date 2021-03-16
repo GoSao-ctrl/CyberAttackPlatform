@@ -1,0 +1,19 @@
+{
+    "nmap": {
+        "scaninfo": {
+            "tcp": {
+                "method": "syn",
+                "services": "80"
+            }
+        },
+        "scanstats": {
+            "timestr": "Tue Sep 29 15:15:19 2020",
+            "downhosts": "1",
+            "uphosts": "0",
+            "elapsed": "3.04",
+            "totalhosts": "1"
+        },
+        "command_line": "nmap -oX - -p 80 -sV 192.168.1.105"
+    },
+    "scan": {}
+}

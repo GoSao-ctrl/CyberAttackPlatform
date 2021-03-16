@@ -1,0 +1,14 @@
+{
+    "nmap": {
+        "scanstats": {
+            "downhosts": "1",
+            "elapsed": "2.13",
+            "timestr": "Tue Sep 29 15:30:10 2020",
+            "totalhosts": "1",
+            "uphosts": "0"
+        },
+        "command_line": "nmap -oX - -sn 192.168.1.105",
+        "scaninfo": {}
+    },
+    "scan": {}
+}

@@ -1,0 +1,32 @@
+{
+    "nmap": {
+        "command_line": "nmap -oX - -sn 192.168.1.173",
+        "scanstats": {
+            "uphosts": "1",
+            "elapsed": "2.89",
+            "totalhosts": "1",
+            "timestr": "Tue Jan 26 14:46:53 2021",
+            "downhosts": "0"
+        },
+        "scaninfo": {}
+    },
+    "scan": {
+        "192.168.1.173": {
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "addresses": {
+                "ipv4": "192.168.1.173",
+                "mac": "80:32:53:ED:94:0F"
+            },
+            "vendor": {},
+            "hostnames": [
+                {
+                    "type": "",
+                    "name": ""
+                }
+            ]
+        }
+    }
+}

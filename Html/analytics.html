@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="order by dede58.com"/>
+  <title>Adminity - Analytics</title>
+  <link rel="shortcut icon" href="../static/img/favicon.gif">
+  <!---CSS Files-->
+  <link rel="stylesheet" href="../static/css/master.css">
+  <!---jQuery Files-->
+  <script src="../static/js/jquery-1.7.1.min.js"></script>
+  <script src="../static/js/jquery-ui-1.8.17.min.js"></script>
+  <script src="../static/js/styler.js"></script>
+  <script src="../static/js/jquery.tipTip.js"></script>
+  <script src="../static/js/colorpicker.js"></script>
+  <script src="../static/js/sticky.full.js"></script>
+  <script src="../static/js/global.js"></script>
+  <script src="../static/js/flot/jquery.flot.min.js"></script>
+  <script src="../static/js/flot/jquery.flot.pie.min.js"></script>
+  <script src="../static/js/flot/jquery.flot.resize.min.js"></script>
+  <script src="../static/js/echarts-b.js"></script>
+  <script src="../static/js/ecStat.min.js"></script>
+  <script src="../static/js/echarts.js"></script>
+  <script src="../static/js/dataTool.js"></script>
+  <script src="../static/js/bmap.js"></script>
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!--[if lte IE 8]>
+  <script language="javascript" type="text/javascript" src="../static/js/flot/excanvas.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <!--- HEADER -->
+
+  <div class="header">
+   <a href="dashboard.html"><span class="head_font">网络攻击平台</span></a>
+   <div class="styler">
+     <ul class="styler-show">
+       <li><div id="colorSelector-top-bar"></div></li>
+       <li><div id="colorSelector-box-head"></div></li>
+     </ul>
+   </div>
+  </div>
+
+  <div class="top-bar">
+      <ul id="nav">
+        <li id="user-panel">
+          <img src="../static/img/nav/usr-avatar.jpg" id="usr-avatar" alt="" />
+          <div id="usr-info">
+            <p id="usr-name">Welcome back, Michael.</p>
+            <p id="usr-notif">You have 6 notifications. <a href="#">View</a></p>
+            <p><a href="index.html">Log out</a></p>
+          </div>
+        </li>
+        <li>
+        <ul id="top-nav">
+         <li class="nav-item">
+           <a href="dashboard.html"><img src="../static/img/nav/dash.png" alt="" /><p>扫描/攻击</p></a>
+         </li>
+         <li class="nav-item">
+           <a href="#"><img src="../static/img/nav/anlt-active.png" alt="" /><p>攻击效果</p></a>
+         </li>
+         <li class="nav-item">
+           <a href="tables.html"><img src="../static/img/nav/tb.png" alt="" /><p>操作日志</p></a>
+         </li>
+         <!--<li class="nav-item">-->
+           <!--<a href="calendar.html"><img src="img/nav/cal.png" alt="" /><p>Calendar</p></a>-->
+         <!--</li>-->
+         <!--<li class="nav-item">-->
+           <!--<a href="widgets.html"><img src="img/nav/widgets.png" alt="" /><p>Widgets</p></a>-->
+         <!--</li>-->
+         <!--<li class="nav-item">-->
+           <!--<a href="grid.html"><img src="img/nav/grid.png" alt="" /><p>Grid</p></a>-->
+           <!--<ul class="sub-nav">-->
+            <!--<li><a href="#">12 Columns</a></li>-->
+            <!--<li><a href="#">16 Columns</a></li>-->
+          <!--</ul>-->
+         <!--</li>-->
+         <!--<li class="nav-item">-->
+           <!--<a href="filemanager.html"><img src="img/nav/flm.png" alt="" /><p>File Manager</p></a>-->
+         <!--</li>-->
+         <!--<li class="nav-item">-->
+           <!--<a href="gallery.html"><img src="img/nav/gal.png" alt="" /><p>Gallery</p></a>-->
+         <!--</li>-->
+         <!--<li class="nav-item">-->
+           <!--<a href="icons.html"><img src="img/nav/icn.png" alt="" /><p>Icons</p></a>-->
+         <!--</li>-->
+         <!--<li class="nav-item">-->
+           <!--<a href="#"><img src="img/nav/err.png" alt="" /><p>Error Pages</p></a>-->
+           <!--<ul class="sub-nav">-->
+            <!--<li><a href="403.html">403 Page</a></li>-->
+            <!--<li><a href="404.html">404 Page</a></li>-->
+            <!--<li><a href="503.html">503 Page</a></li>-->
+          <!--</ul>-->
+         <!--</li>-->
+         <!--<li class="nav-item">-->
+           <!--<a href="typography.html"><img src="img/nav/typ.png" alt="" /><p>Typography</p></a>-->
+         <!--</li>-->
+       </ul>
+      </li>
+     </ul>
+  </div>
+
+  <!--- CONTENT AREA -->
+
+  <div class="content container_12">
+      <div class="ad-notif-success grid_12"><p>With the jQuery Flot plugin, your geeky analytical side will be pleased with the charting possibilities.</p></div>
+<!--      <div class="box grid_6">-->
+<!--        <div class="box-head"><h2>Line Chart</h2></div>-->
+<!--        <div class="box-content">-->
+<!--          <div id="flot-lines"></div>-->
+<!--        </div>-->
+<!--      </div> -->
+      <div class="box grid_6">
+        <h2>攻击拓扑</h2>
+      </div>
+        <div class="box grid_6">
+        <h2>攻击效果</h2>
+      </div>
+      <div class="box grid_6" style="height: 600px">
+        <div id="container" style="width: 100%;height: 100%"></div>
+      </div>
+      <div class="box grid_6">
+        <div class="box-head"><h2>流量实时展示（日）</h2></div>
+        <div class="box-content">
+          <div id="flot-realtime"></div>
+        </div>
+          <div class="box-head"><h2>流量实时展示（小时）</h2></div>
+        <div class="box-content">
+          <div id="flot-realtime1"></div>
+        </div>
+      </div>
+<!--      <div class="box grid_6">-->
+<!--        <div class="box-head"><h2>Pie Chart</h2></div>-->
+<!--        <div class="box-content">-->
+<!--          <div id="flot-pie"></div>-->
+<!--        </div>-->
+<!--      </div> -->
+<!--      <div class="box grid_6">-->
+<!--        <div class="box-head"><h2>Realtime Chart</h2></div>-->
+<!--        <div class="box-content">-->
+<!--&lt;!&ndash;          <div id="flot-realtime1"></div>&ndash;&gt;-->
+<!--        </div>-->
+<!--      </div>-->
+  </div>
+
+<div class="footer container_12">
+  <p class="grid_12">Powered by Adminity Administration Interface</p>
+</div>
+
+<script> /* SCRIPTS */
+  $(function () {
+
+      // /* FOR THE LINE CHART */
+      // var sin = [], cos = [];
+      // for (var i = 0; i < 14; i += 0.5) {
+      //     sin.push([i, Math.sin(i)]);
+      //     cos.push([i, Math.cos(i)]);
+      // }
+      // var plot = $.plot($("#flot-lines"),
+      //        [ { data: sin, label: "Green", color: "#71a100"}, { data: cos, label: "Blue", color: "#308eef" } ], {
+      //            series: {
+      //                lines: { show: true },
+      //                points: { show: true }
+      //            },
+      //            grid: { hoverable: true },
+      //            yaxis: { min: -1.2, max: 1.2 }
+      //          });
+      // var previousPoint = null;
+      // $("#flot-lines").bind("plothover", function (event, pos, item) {
+      //     if ($("#enablePosition:checked").length > 0) {
+      //         var str = "(" + pos.x.toFixed(2) + ", " + pos.y.toFixed(2) + ")";
+      //         $("#hoverdata").text(str);
+      //     }
+      // });
+      //
+      // /* FOR THE BAR CHART */
+      //
+      // var d1 = [[0,5], [2,7], [4,10], [6,16], [8,19], [10,23], [12,30], [14,35], [16,40], [18,46], [20,54]];
+      // var d2 = [[1,6], [3,9], [5,11], [7,17], [9,21], [11,27], [13,33], [15,38], [17,43], [19,50]];
+      // $.plot($("#flot-bars"), [
+      //     {
+      //        data: d1,
+      //        color: "#71a100",
+      //        label: "Green",
+      //        bars: { show: true }
+      //     },
+      //     {
+      //       data: d2,
+      //       color: "#308eef",
+      //       label: "Blue",
+      //       bars: { show: true }
+      //     }
+      // ]);
+      //
+      // /* FOR THE PIE CHART */
+      //
+      // var piedata =
+      // [
+      //         { label: "Green",  data: 50, color: "#71a100"},
+      //         { label: "Blue",  data: 25, color: "#308eef"},
+      //         { label: "Yellow",  data: 25, color: "#d1ca00"}
+      // ]
+      //
+      // $.plot($("#flot-pie"), piedata,
+      // {
+      //         series: {
+      //             pie: {
+      //                 show: true
+      //             }
+      //         },
+      //         grid: {
+      //             hoverable: true,
+      //             clickable: true
+      //         },
+      //         redraw: true
+      // });
+
+      /* FOR THE REALTIME CHART */
+
+      var data = [], totalPoints = 300;
+          function getRandomData() {
+              if (data.length > 0)
+                  data = data.slice(1);
+
+              // do a random walk
+              while (data.length < totalPoints) {
+                  var prev = data.length > 0 ? data[data.length - 1] : 50;
+                  var y = prev + Math.random() * 10 - 5;
+                  if (y < 0)
+                      y = 0;
+                  if (y > 100)
+                      y = 100;
+                  data.push(y);
+              }
+
+              // zip the generated y values with the x values
+              var res = [];
+              for (var i = 0; i < data.length; ++i)
+                  res.push([i, data[i]])
+              return res;
+          }
+
+          var updateInterval = 30;
+
+          var options = {
+              series: { shadowSize: 0 }, // drawing is faster without shadows
+              yaxis: { min: 0, max: 100 },
+              xaxis: { show:false }
+          };
+          var plot = $.plot($("#flot-realtime"), [ getRandomData() ], options);
+          var plot1 = $.plot($("#flot-realtime1"), [ getRandomData() ], options);
+
+          function update() {
+              plot.setData([ getRandomData() ]);
+              plot1.setData([ getRandomData() ]);
+              // since the axes don't change, we don't need to call plot.setupGrid()
+              plot.draw();
+              plot1.draw();
+
+              setTimeout(update, updateInterval);
+          }
+
+          update();
+
+      //topu chart
+      var dom = document.getElementById("container");
+      var myChart = echarts.init(dom);
+      var app = {};
+      option = null;
+      option = {
+          title: {
+              text: ''
+          },
+          tooltip: {},
+          animationDurationUpdate: 1500,
+          animationEasingUpdate: 'quinticInOut',
+          series: [
+              {
+                  type: 'graph',
+                  layout: 'none',
+                  symbolSize: 70,
+                  roam: true,
+                  label: {
+                      show: true
+                  },
+                  edgeSymbol: ['circle', 'arrow'],
+                  edgeSymbolSize: [4, 10],
+                  edgeLabel: {
+                      fontSize: 20
+                  },
+                  data: [{
+                      name: '攻击节点1',
+                      x: 300,
+                      y: 300
+                  }, {
+                      name: '攻击节点2',
+                      x: 800,
+                      y: 300
+                  }, {
+                      name: '目标节点',
+                      x: 550,
+                      y: 300,
+                      itemStyle:{
+                          color:"grey"
+                      }
+                  }, {
+                      name: '攻击节点4',
+                      x: 550,
+                      y: 500
+                  }],
+                  links: [],
+                  links: [
+                      // {
+                  //     source: 0,
+                  //     target: 1,
+                  //     symbolSize: [5, 20],
+                  //     label: {
+                  //         show: true
+                  //     },
+                  //     lineStyle: {
+                  //         width: 5,
+                  //         curveness: 0.2
+                  //     }
+                  // }, {
+                  //     source: '节点2',
+                  //     target: '节点1',
+                  //     label: {
+                  //         show: true
+                  //     },
+                  //     lineStyle: {
+                  //         curveness: 0.2
+                  //     }
+                  // },
+                  {
+                      source: '攻击节点1',
+                      target: '目标节点'
+                  }, {
+                      source: '攻击节点2',
+                      target: '目标节点'
+                  },  {source: '攻击节点4',
+                      target: '目标节点'
+                  }],
+                  lineStyle: {
+                      opacity: 0.9,
+                      width: 2,
+                      curveness: 0
+                  }
+              }
+          ]
+      };;
+      if (option && typeof option === "object") {
+          myChart.setOption(option, true);
+      }
+  })
+</script>
+
+
+</body>
+</html>

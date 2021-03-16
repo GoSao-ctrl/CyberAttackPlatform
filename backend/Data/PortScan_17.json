@@ -1,0 +1,961 @@
+{
+    "nmap": {
+        "command_line": "nmap -oX - -p 65535 -sS -sU 192.168.1.1-255",
+        "scanstats": {
+            "totalhosts": "255",
+            "elapsed": "10.83",
+            "timestr": "Tue Sep 29 19:21:10 2020",
+            "downhosts": "233",
+            "uphosts": "22"
+        },
+        "scaninfo": {
+            "udp": {
+                "method": "udp",
+                "services": "65535"
+            },
+            "tcp": {
+                "method": "syn",
+                "services": "65535"
+            }
+        }
+    },
+    "scan": {
+        "192.168.1.150": {
+            "udp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "no-response",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "open|filtered"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "no-response",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "filtered"
+                }
+            },
+            "vendor": {
+                "F0:18:98:30:F3:1E": "Apple"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "F0:18:98:30:F3:1E",
+                "ipv4": "192.168.1.150"
+            }
+        },
+        "192.168.1.162": {
+            "udp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "no-response",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "open|filtered"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "no-response",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "filtered"
+                }
+            },
+            "vendor": {
+                "70:85:C2:7C:82:38": "ASRock Incorporation"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "70:85:C2:7C:82:38",
+                "ipv4": "192.168.1.162"
+            }
+        },
+        "192.168.1.201": {
+            "udp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "port-unreach",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "closed"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "reset",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "closed"
+                }
+            },
+            "vendor": {
+                "48:5B:39:C5:3F:37": "Asustek Computer"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "48:5B:39:C5:3F:37",
+                "ipv4": "192.168.1.201"
+            }
+        },
+        "192.168.1.202": {
+            "udp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "port-unreach",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "closed"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "reset",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "closed"
+                }
+            },
+            "vendor": {
+                "48:5B:39:C5:3E:A3": "Asustek Computer"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "48:5B:39:C5:3E:A3",
+                "ipv4": "192.168.1.202"
+            }
+        },
+        "192.168.1.203": {
+            "udp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "port-unreach",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "closed"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "reset",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "closed"
+                }
+            },
+            "vendor": {
+                "48:5B:39:C2:7E:5A": "Asustek Computer"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "48:5B:39:C2:7E:5A",
+                "ipv4": "192.168.1.203"
+            }
+        },
+        "192.168.1.115": {
+            "udp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "host-prohibited",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "filtered"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "host-prohibited",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "filtered"
+                }
+            },
+            "vendor": {
+                "00:0C:29:EF:F2:E4": "VMware"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "00:0C:29:EF:F2:E4",
+                "ipv4": "192.168.1.115"
+            }
+        },
+        "192.168.1.183": {
+            "udp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "no-response",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "open|filtered"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "no-response",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "filtered"
+                }
+            },
+            "vendor": {},
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "DA:C6:00:50:03:45",
+                "ipv4": "192.168.1.183"
+            }
+        },
+        "192.168.1.118": {
+            "udp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "no-response",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "unknown"
+                }
+            },
+            "status": {
+                "reason": "localhost-response",
+                "state": "up"
+            },
+            "tcp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "no-response",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "unknown"
+                }
+            },
+            "vendor": {},
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "ipv4": "192.168.1.118"
+            }
+        },
+        "192.168.1.177": {
+            "udp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "no-response",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "open|filtered"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "no-response",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "filtered"
+                }
+            },
+            "vendor": {
+                "00:E1:8C:B5:61:25": "Intel Corporate"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "00:E1:8C:B5:61:25",
+                "ipv4": "192.168.1.177"
+            }
+        },
+        "192.168.1.182": {
+            "udp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "host-prohibited",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "filtered"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "host-prohibited",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "filtered"
+                }
+            },
+            "vendor": {
+                "54:9F:35:11:25:5E": "Dell"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "54:9F:35:11:25:5E",
+                "ipv4": "192.168.1.182"
+            }
+        },
+        "192.168.1.193": {
+            "udp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "port-unreach",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "closed"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "reset",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "closed"
+                }
+            },
+            "vendor": {
+                "40:31:3C:CC:36:C4": "Xiaomi Electronics,co."
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "40:31:3C:CC:36:C4",
+                "ipv4": "192.168.1.193"
+            }
+        },
+        "192.168.1.126": {
+            "udp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "port-unreach",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "closed"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "reset",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "closed"
+                }
+            },
+            "vendor": {},
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "BE:F9:E5:48:04:77",
+                "ipv4": "192.168.1.126"
+            }
+        },
+        "192.168.1.200": {
+            "udp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "no-response",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "open|filtered"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "no-response",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "filtered"
+                }
+            },
+            "vendor": {
+                "DC:FE:07:28:21:FE": "Pegatron"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "DC:FE:07:28:21:FE",
+                "ipv4": "192.168.1.200"
+            }
+        },
+        "192.168.1.218": {
+            "udp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "port-unreach",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "closed"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "reset",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "closed"
+                }
+            },
+            "vendor": {
+                "F8:87:F1:07:9D:D1": "Apple"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "F8:87:F1:07:9D:D1",
+                "ipv4": "192.168.1.218"
+            }
+        },
+        "192.168.1.114": {
+            "udp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "host-prohibited",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "filtered"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "host-prohibited",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "filtered"
+                }
+            },
+            "vendor": {
+                "00:0C:29:9C:72:06": "VMware"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "00:0C:29:9C:72:06",
+                "ipv4": "192.168.1.114"
+            }
+        },
+        "192.168.1.207": {
+            "udp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "no-response",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "open|filtered"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "no-response",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "filtered"
+                }
+            },
+            "vendor": {
+                "BC:46:99:76:C6:AE": "Tp-link Technologies"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "BC:46:99:76:C6:AE",
+                "ipv4": "192.168.1.207"
+            }
+        },
+        "192.168.1.116": {
+            "udp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "host-prohibited",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "filtered"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "host-prohibited",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "filtered"
+                }
+            },
+            "vendor": {
+                "00:0C:29:17:94:27": "VMware"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "00:0C:29:17:94:27",
+                "ipv4": "192.168.1.116"
+            }
+        },
+        "192.168.1.219": {
+            "udp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "port-unreach",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "closed"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "reset",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "closed"
+                }
+            },
+            "vendor": {
+                "70:85:C2:7C:7E:64": "ASRock Incorporation"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "70:85:C2:7C:7E:64",
+                "ipv4": "192.168.1.219"
+            }
+        },
+        "192.168.1.191": {
+            "udp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "port-unreach",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "closed"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "reset",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "closed"
+                }
+            },
+            "vendor": {
+                "C8:1F:66:F8:9C:58": "Dell"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "C8:1F:66:F8:9C:58",
+                "ipv4": "192.168.1.191"
+            }
+        },
+        "192.168.1.117": {
+            "udp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "port-unreach",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "closed"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "reset",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "closed"
+                }
+            },
+            "vendor": {
+                "EC:41:18:9C:61:94": "Xiaomi Electronics,co."
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "EC:41:18:9C:61:94",
+                "ipv4": "192.168.1.117"
+            }
+        },
+        "192.168.1.1": {
+            "udp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "port-unreach",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "closed"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "reset",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "closed"
+                }
+            },
+            "vendor": {
+                "94:D9:B3:28:F5:97": "Tp-link Technologies"
+            },
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "94:D9:B3:28:F5:97",
+                "ipv4": "192.168.1.1"
+            }
+        },
+        "192.168.1.194": {
+            "udp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "port-unreach",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "closed"
+                }
+            },
+            "status": {
+                "reason": "arp-response",
+                "state": "up"
+            },
+            "tcp": {
+                "65535": {
+                    "extrainfo": "",
+                    "product": "",
+                    "cpe": "",
+                    "reason": "reset",
+                    "name": "",
+                    "conf": "",
+                    "version": "",
+                    "state": "closed"
+                }
+            },
+            "vendor": {},
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "mac": "CE:E0:39:1F:31:31",
+                "ipv4": "192.168.1.194"
+            }
+        }
+    }
+}
