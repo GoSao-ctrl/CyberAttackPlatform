@@ -17,7 +17,6 @@ def start_tornado():
     server = httpserver.HTTPServer(app)
     server.listen(options.port)
     IOLoop.instance().start()
-    print("server in position...")
 
 if __name__ == '__main__':
     start_tornado()

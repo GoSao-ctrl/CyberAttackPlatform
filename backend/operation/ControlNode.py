@@ -1,5 +1,5 @@
-from kafka import KafkaConsumer
-from kafka import KafkaProducer
+# from kafka import KafkaConsumer
+# from kafka import KafkaProducer
 import json
 
 class ControlNode():

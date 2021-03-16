@@ -24,8 +24,6 @@ class Application(tornado.web.Application):
             (r'/', GeneralHandler.MainHandler),
             (r'/index/(.*)', GeneralHandler.SubPageHandler),
             (r'/Command/(.*)', InstructionAnalysis.HandlerManager)
-            # zj add url
-            # (r'/login/(.*)', LoginHandler.HandlerManager, dict(operation=self.user_op)),
 
         ]
         print("tornado init...")
