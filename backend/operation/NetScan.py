@@ -134,7 +134,7 @@ class NmapScan:
 
 def NmapScanTest():
     ns = NmapScan()
-    ns.AnalyseCommand("s2 192.168.1.173")
+    ns.AnalyseCommand("s2 192.168.2.1")
     ns.StartScan()
     ns.PrintScan()
     ns.WriteJson()
