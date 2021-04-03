@@ -14,11 +14,16 @@ class Server:
         self.serverFd.listen(100)
         self.inputs = [self.serverFd]
         self.outputs = []
+        self.NodeNum = 2
+        self.sql = SqlOperation()
+        self.sql.Connect()
+        self.GetTaskID()
 
     def Accept(self):
         print("Common Accept...")
         conn, connAddr = self.serverFd.accept()
         return conn
+
     def SelectAccept(self):
         print("Select Accept...")
         self.serverFd.setblocking(False)
@@ -42,30 +47,37 @@ class Server:
                         self.inputs.remove(fd)
                         fd.close()
 
+    def GetTaskID(self):
+        query = "SELECT TaskID from task ORDER BY TaskID DESC LIMIT 1"
+        result = self.sql.SqlQueryOne(query)
+        if result:
+            GlobalSetting.TaskID = result[0]
+
     def NodeAllocation(self):
-        taskDict={}
+        query = "SELECT NodeIP from resource ORDER BY (CPU+Memory) ASC LIMIT {}".format(self.NodeNum)
+        tupleResults = self.sql.SqlQuery(query)
+        results = []
+        for row in tupleResults:
+            results.append(row[0])
+        taskDict = {}
         taskDict["TaskID"] = GlobalSetting.TaskID
-        taskDict["AssignNode"] = "192.168.2.15"
+        taskDict["AssignNode"] = ",".join(results)
         taskDict["Status"] = GlobalSetting.TaskStatus[0]
-        sql = SqlOperation()
-        sql.Connect()
-        sql.Insert("task", taskDict)
+        self.sql.Insert("task", taskDict)
+
     def Analyze(self, data):
         print("Analyze")
         dataDict = json.loads(data)
         if(dataDict["TaskType"] == "Attack"):
             GlobalSetting.TaskID += 1
             dataDict["TaskID"] = GlobalSetting.TaskID
-            sql = SqlOperation()
-            sql.Connect()
-            sql.Insert("attacktask", dataDict)
+            self.NodeNum = dataDict["TaskNode"]
+            self.sql.Insert("attacktask", dataDict)
             self.NodeAllocation()
         elif(dataDict["TaskType"] == "Scan"):
             GlobalSetting.TaskID += 1
             dataDict["TaskID"] = GlobalSetting.TaskID
-            sql = SqlOperation()
-            sql.Connect()
-            sql.Insert("scantask", dataDict)
+            self.sql.Insert("scantask", dataDict)
             self.NodeAllocation()
         else:
             print("Error Type")
@@ -82,6 +94,7 @@ class Server:
         connectFd.send(sendData.encode("gbk"))
 
     def close(self):
+        self.sql.Close()
         self.serverFd.close()
 
 

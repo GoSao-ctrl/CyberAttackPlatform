@@ -42,7 +42,7 @@ def testAttack():
     scanCommand = json.dumps(scanCommandDict)
 
     client = Client("127.0.0.1", 6666)
-    client.send(attackCommand)
+    client.send(scanCommand)
     client.recv()
 
     client.close()
