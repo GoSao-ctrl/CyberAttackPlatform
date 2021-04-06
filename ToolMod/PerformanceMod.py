@@ -8,24 +8,24 @@ class Performance():
 
     def GetCPU(self):
         cpu = psutil.cpu_percent(interval=1.0)
-        print("CPU:", cpu)
+        # print("CPU:", cpu)
         return cpu
 
     def GetMemory(self):
         memory = psutil.virtual_memory().percent
-        print("Memory:", memory)
+        # print("Memory:", memory)
         return memory
 
     def GetTime(self):
         nowTime = time.strftime("%H:%M:%S", time.localtime())
-        print("NowTime:", nowTime)
+        # print("NowTime:", nowTime)
         return nowTime
     def GetIP(self):
         info = psutil.net_if_addrs()
         for k, v in info.items():
             for item in v:
                 if item[0] == 2 and item[1][0:10] == '192.168.2.':
-                    print("Current IP:",item[1])
+                    # print("Current IP:",item[1])
                     return item[1]
 
 

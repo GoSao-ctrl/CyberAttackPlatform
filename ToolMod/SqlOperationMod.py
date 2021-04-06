@@ -46,6 +46,8 @@ class SqlOperation:
             if conditionFlag:
                 if (isinstance(value, str)):
                     temp = "'" + value + "'"
+                elif (isinstance(value, int)):
+                    temp = str(value)
                 else:
                     temp = value
                 condition.append(key)

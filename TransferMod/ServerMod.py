@@ -3,6 +3,7 @@ import select
 import json
 import queue
 from time import sleep
+from threading import Thread
 from ToolMod.SqlOperationMod import SqlOperation
 import GlobalSetting
 class Server:
@@ -14,7 +15,6 @@ class Server:
         self.serverFd.listen(100)
         self.inputs = [self.serverFd]
         self.outputs = []
-        self.NodeNum = 2
         self.sql = SqlOperation()
         self.sql.Connect()
         self.GetTaskID()
@@ -40,8 +40,8 @@ class Server:
                 else:
                     recvData = self.Recv(fd)
                     if len(recvData) != 0:
-                        sendData = self.Analyze(recvData)
-                        self.Send(sendData, fd)
+                        myThread = Thread(target=self.Analyze, args=(recvData, fd, ))
+                        myThread.start()
                     else:
                         print("Closing...")
                         self.inputs.remove(fd)
@@ -53,35 +53,36 @@ class Server:
         if result:
             GlobalSetting.TaskID = result[0]
 
-    def NodeAllocation(self):
-        query = "SELECT NodeIP from resource ORDER BY (CPU+Memory) ASC LIMIT {}".format(self.NodeNum)
+    def NodeAllocation(self, TaskType, NodeNum=1):
+        query = "SELECT NodeIP from resource ORDER BY (CPU+Memory) ASC LIMIT {}".format(NodeNum)
         tupleResults = self.sql.SqlQuery(query)
         results = []
         for row in tupleResults:
             results.append(row[0])
         taskDict = {}
         taskDict["TaskID"] = GlobalSetting.TaskID
+        taskDict["TaskType"] = TaskType
         taskDict["AssignNode"] = ",".join(results)
         taskDict["Status"] = GlobalSetting.TaskStatus[0]
         self.sql.Insert("task", taskDict)
 
-    def Analyze(self, data):
+    def Analyze(self, data, fd):
         print("Analyze")
         dataDict = json.loads(data)
         if(dataDict["TaskType"] == "Attack"):
             GlobalSetting.TaskID += 1
             dataDict["TaskID"] = GlobalSetting.TaskID
-            self.NodeNum = dataDict["TaskNode"]
+            NodeNum = dataDict["TaskNode"]
             self.sql.Insert("attacktask", dataDict)
-            self.NodeAllocation()
+            self.NodeAllocation("Attack", NodeNum)
         elif(dataDict["TaskType"] == "Scan"):
             GlobalSetting.TaskID += 1
             dataDict["TaskID"] = GlobalSetting.TaskID
             self.sql.Insert("scantask", dataDict)
-            self.NodeAllocation()
+            self.NodeAllocation("Scan")
         else:
             print("Error Type")
-        return data
+        self.Send(data, fd)
 
 
     def Recv(self, connectFd):
