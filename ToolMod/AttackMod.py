@@ -1,3 +1,4 @@
+#-*- coding:utf-8 –*-
 from ToolMod.PerformanceMod import Performance
 from ToolMod.SqlOperationMod import SqlOperation
 import GlobalSetting
@@ -7,6 +8,7 @@ import threading
 import json
 from time import sleep
 
+#攻击节点
 class AttackSide:
     def __init__(self):
         self.ip = '127.0.0.1'
@@ -14,6 +16,11 @@ class AttackSide:
         self.sql.Connect()
 
     def UpdatePerformance(self):
+        '''
+        将自身已用资源情况进行存库，
+        通过定时器，5秒上传一次
+        @return:
+        '''
         resource = {}
         performance = Performance()
         resource["NodeIP"] = performance.GetIP()
@@ -23,8 +30,10 @@ class AttackSide:
         self.ip = resource["NodeIP"]
         sql = SqlOperation()
         sql.Connect()
+        #根据自身IP对数据库资源信息进行查询
         query = "SELECT * FROM resource where NodeIP={}".format("'" + resource["NodeIP"] + "'")
         searchResult = sql.SqlQueryOne(query)
+        #如果存在表项则更新，不存在则创建
         if searchResult:
             sql.Update("resource", resource)
         else:
@@ -34,6 +43,11 @@ class AttackSide:
         self.performanceTimer.start()
 
     def CheckTask(self):
+        '''
+        检查是否有需要执行的任务
+        每5秒检查一次
+        @return:无
+        '''
         query = "SELECT TaskID,TaskType,AssignNode FROM task WHERE Status='Waiting'"
         searchResult = self.sql.SqlQuery(query)
         for eachtuple in searchResult:
@@ -47,6 +61,12 @@ class AttackSide:
         self.taskTimer.start()
 
     def AnalyzeAttack(self, TaskID, TaskType):
+        '''
+        从数据库中拿出攻击指令进行执行
+        @param TaskID: 需要执行的任务序号
+        @param TaskType: 任务类型
+        @return: 无
+        '''
         print("Start Attack ID:", TaskID, " Type:", TaskType)
         if(TaskType == "Attack"):
             attackDict = {}
@@ -80,14 +100,28 @@ class AttackSide:
 
 
     def StartAttack(self, attackJson):
+        '''
+        发起攻击
+        @param attackJson: 攻击所需的字段
+        @return: 无
+        '''
         dataDict = json.loads(attackJson)
 
 
 
     def StartScan(self, scanJson):
+        '''
+        发起扫描
+        @param scanJson:扫描所需字段
+        @return: 无
+        '''
         dataDict = json.loads(scanJson)
 
     def StartAttackSide(self):
+        '''
+        开启攻击节点功能，更新状态，执行任务
+        @return:
+        '''
         myThread1 = Thread(target=self.UpdatePerformance)
         myThread1.start()
         sleep(1)
@@ -95,6 +129,10 @@ class AttackSide:
         myThread2.start()
 
     def Close(self):
+        '''
+        关闭攻击节点功能
+        @return: 无
+        '''
         self.performanceTimer.cancel()
         self.taskTimer.cancel()
         self.sql.Close()

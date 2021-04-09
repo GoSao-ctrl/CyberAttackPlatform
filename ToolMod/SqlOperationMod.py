@@ -1,7 +1,12 @@
+#-*- coding:utf-8 –*-
 import pymysql
 
 class SqlOperation:
     def __init__(self, sqlName="netattack"):
+        '''
+        初始化数据库操作函数
+        @param sqlName: 数据库名称
+        '''
         self.sqlName = sqlName
         self.db = ''
         self.cursor = ''
@@ -14,6 +19,12 @@ class SqlOperation:
             print("Sql Connect Fail", str(e))
 
     def Insert(self,table,dict):
+        '''
+        插入操作
+        @param table: 插入表
+        @param dict: 需要插入的字段字典
+        @return: 无
+        '''
         keys = []
         values = []
         for key,value in dict.items():
@@ -39,6 +50,12 @@ class SqlOperation:
             print("Insert Fail")
 
     def Update(self,table,dict):
+        '''
+        数据库更新操作
+        @param table: 更新表项
+        @param dict: 需要更新的字典，第一项为更新的条件
+        @return: 无
+        '''
         condition = []
         conditionFlag = True
         sql = "UPDATE " + table + " SET "
@@ -77,6 +94,11 @@ class SqlOperation:
             print("Update Fail")
 
     def SqlQueryOne(self,sql):
+        '''
+        数据库查询一条结果操作
+        @param sql: 查询语句
+        @return: 查询的结果，为一个tuple结构
+        '''
         try:
             self.cursor.execute(sql)
             result = self.cursor.fetchone()
@@ -86,7 +108,13 @@ class SqlOperation:
         except:
             # self.db.rollback()
             print("Query Fail")
+
     def SqlQuery(self,sql):
+        '''
+        查询多个结果
+        @param sql: 查询语句
+        @return: 返回多条查询结果，并将其组装为一个list，list里面的每项都是一个tuple
+        '''
         try:
             self.cursor.execute(sql)
             tupleResults = self.cursor.fetchall()

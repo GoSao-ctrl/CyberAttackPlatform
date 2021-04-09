@@ -1,24 +1,36 @@
+#-*- coding:utf-8 –*-
 from socket import *
 import json
 
 class Client:
     def __init__(self, serverIp="127.0.0.1", serverPort=6666):
+        '''
+        攻击节点通过client与服务端进行数据传输
+        @param serverIp: 服务端IP
+        @param serverPort: 服务端端口
+        '''
         self.serverIp = serverIp
         self.serverPort = serverPort
         self.clientFd = socket(AF_INET, SOCK_STREAM)
-        self.connect()
+        self.err = self.connect()
 
     def connect(self):
-        self.clientFd.connect((self.serverIp,self.serverPort))
+        try:
+            self.clientFd.connect((self.serverIp,self.serverPort))
+        except Exception as err:
+            print("Err:", err)
+            return -1
 
     def send(self,sendData):
         print("Client Send:", sendData)
-        self.clientFd.send(sendData.encode("gbk"))
+        if self.err != -1:
+            self.clientFd.send(sendData.encode("gbk"))
 
     def recv(self):
-        recvData = self.clientFd.recv(1024)
-        print("Client Recv:", recvData.decode("gbk"))
-        return recvData.decode("gbk")
+        if self.err != -1:
+            recvData = self.clientFd.recv(1024)
+            print("Client Recv:", recvData.decode("gbk"))
+            return recvData.decode("gbk")
 
     def close(self):
         self.clientFd.close()
@@ -43,7 +55,7 @@ def testAttack():
 
     client = Client("127.0.0.1", 6666)
     client.send(scanCommand)
-    client.recv()
+    # client.recv()
 
     client.close()
 
