@@ -1,6 +1,7 @@
 # from kafka import KafkaConsumer
 # from kafka import KafkaProducer
 import json
+from backend.operation.AttackNode import *
 
 class ControlNode():
     def __init__(self, commandTopic='command', dataTopic='data'):
@@ -47,10 +48,15 @@ def ControlNodeTest():
     controlnode.ProduceCommand()
     controlnode.ConsumeData()
 
-def ControlNodeHandle(type,ip,port=None):
-    controlnode = ControlNode("command", "data")
-    controlnode.GenCommand(type, ip,port)
-    controlnode.ProduceCommand()
-    return controlnode.ConsumeData()
+def ControlNodeHandle(AttackParam):
+    print("start...")
+    # controlnode = ControlNode("command", "data")
+    # controlnode.GenCommand(type, ip,port)
+    attack_node = AttackNode(AttackParam)
+    info = attack_node.AnalyzeCommand()
+    print("finished！")
+    return info
+    # controlnode.ProduceCommand()
+    # return controlnode.ConsumeData()
 if __name__ == "__main__":
     ControlNodeTest()

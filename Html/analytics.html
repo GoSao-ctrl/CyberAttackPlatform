@@ -48,24 +48,24 @@
 
   <div class="top-bar">
       <ul id="nav">
-        <li id="user-panel">
-          <img src="../static/img/nav/usr-avatar.jpg" id="usr-avatar" alt="" />
-          <div id="usr-info">
-            <p id="usr-name">Welcome back, Michael.</p>
-            <p id="usr-notif">You have 6 notifications. <a href="#">View</a></p>
-            <p><a href="index.html">Log out</a></p>
-          </div>
-        </li>
+<!--        <li id="user-panel">-->
+<!--          <img src="../static/img/nav/usr-avatar.jpg" id="usr-avatar" alt="" />-->
+<!--          <div id="usr-info">-->
+<!--            <p id="usr-name">Welcome back</p>-->
+<!--            <p id="usr-notif"><a href="#">View</a></p>-->
+<!--            <p><a href="index.html">Log out</a></p>-->
+<!--          </div>-->
+<!--        </li>-->
         <li>
         <ul id="top-nav">
          <li class="nav-item">
            <a href="dashboard.html"><img src="../static/img/nav/dash.png" alt="" /><p>扫描/攻击</p></a>
          </li>
          <li class="nav-item">
-           <a href="#"><img src="../static/img/nav/anlt-active.png" alt="" /><p>攻击效果</p></a>
+           <a href="#"><img src="../static/img/nav/anlt-active.png" alt="" /><p>辅助攻击</p></a>
          </li>
          <li class="nav-item">
-           <a href="tables.html"><img src="../static/img/nav/tb.png" alt="" /><p>操作日志</p></a>
+           <a href="log.html"><img src="../static/img/nav/tb.png" alt="" /><p>操作日志</p></a>
          </li>
          <!--<li class="nav-item">-->
            <!--<a href="calendar.html"><img src="img/nav/cal.png" alt="" /><p>Calendar</p></a>-->
@@ -108,7 +108,7 @@
   <!--- CONTENT AREA -->
 
   <div class="content container_12">
-      <div class="ad-notif-success grid_12"><p>With the jQuery Flot plugin, your geeky analytical side will be pleased with the charting possibilities.</p></div>
+<!--      <div class="ad-notif-success grid_12"><p>With the jQuery Flot plugin, your geeky analytical side will be pleased with the charting possibilities.</p></div>-->
 <!--      <div class="box grid_6">-->
 <!--        <div class="box-head"><h2>Line Chart</h2></div>-->
 <!--        <div class="box-content">-->
@@ -116,23 +116,24 @@
 <!--        </div>-->
 <!--      </div> -->
       <div class="box grid_6">
-        <h2>攻击拓扑</h2>
+        <h2>攻击图</h2>
       </div>
         <div class="box grid_6">
-        <h2>攻击效果</h2>
+        <h2>攻击路径</h2>
       </div>
-      <div class="box grid_6" style="height: 600px">
-        <div id="container" style="width: 100%;height: 100%"></div>
+      <div class="box grid_6" style="height: 500px">
+        <div id="container1" style="width: 100%;height: 100%"></div>
       </div>
-      <div class="box grid_6">
-        <div class="box-head"><h2>流量实时展示（日）</h2></div>
-        <div class="box-content">
-          <div id="flot-realtime"></div>
-        </div>
-          <div class="box-head"><h2>流量实时展示（小时）</h2></div>
-        <div class="box-content">
-          <div id="flot-realtime1"></div>
-        </div>
+      <div class="box grid_6" style="height: 500px">
+<!--        <div class="box-head"><h2>流量实时展示（日）</h2></div>-->
+<!--        <div class="box-content">-->
+<!--          <div id="flot-realtime"></div>-->
+<!--        </div>-->
+<!--          <div class="box-head"><h2>流量实时展示（小时）</h2></div>-->
+<!--        <div class="box-content">-->
+<!--          <div id="flot-realtime1"></div>-->
+<!--        </div>-->
+          <div id="container2" style="width: 100%;height: 100%"></div>
       </div>
 <!--      <div class="box grid_6">-->
 <!--        <div class="box-head"><h2>Pie Chart</h2></div>-->
@@ -149,7 +150,7 @@
   </div>
 
 <div class="footer container_12">
-  <p class="grid_12">Powered by Adminity Administration Interface</p>
+  <p class="grid_12">Powered by Zhangchenghui</p>
 </div>
 
 <script> /* SCRIPTS */
@@ -222,56 +223,57 @@
 
       /* FOR THE REALTIME CHART */
 
-      var data = [], totalPoints = 300;
-          function getRandomData() {
-              if (data.length > 0)
-                  data = data.slice(1);
-
-              // do a random walk
-              while (data.length < totalPoints) {
-                  var prev = data.length > 0 ? data[data.length - 1] : 50;
-                  var y = prev + Math.random() * 10 - 5;
-                  if (y < 0)
-                      y = 0;
-                  if (y > 100)
-                      y = 100;
-                  data.push(y);
-              }
-
-              // zip the generated y values with the x values
-              var res = [];
-              for (var i = 0; i < data.length; ++i)
-                  res.push([i, data[i]])
-              return res;
-          }
-
-          var updateInterval = 30;
-
-          var options = {
-              series: { shadowSize: 0 }, // drawing is faster without shadows
-              yaxis: { min: 0, max: 100 },
-              xaxis: { show:false }
-          };
-          var plot = $.plot($("#flot-realtime"), [ getRandomData() ], options);
-          var plot1 = $.plot($("#flot-realtime1"), [ getRandomData() ], options);
-
-          function update() {
-              plot.setData([ getRandomData() ]);
-              plot1.setData([ getRandomData() ]);
-              // since the axes don't change, we don't need to call plot.setupGrid()
-              plot.draw();
-              plot1.draw();
-
-              setTimeout(update, updateInterval);
-          }
-
-          update();
+      // var data = [], totalPoints = 300;
+      //     function getRandomData() {
+      //         if (data.length > 0)
+      //             data = data.slice(1);
+      //
+      //         // do a random walk
+      //         while (data.length < totalPoints) {
+      //             var prev = data.length > 0 ? data[data.length - 1] : 50;
+      //             var y = prev + Math.random() * 10 - 5;
+      //             if (y < 0)
+      //                 y = 0;
+      //             if (y > 100)
+      //                 y = 100;
+      //             data.push(y);
+      //         }
+      //
+      //         // zip the generated y values with the x values
+      //         var res = [];
+      //         for (var i = 0; i < data.length; ++i)
+      //             res.push([i, data[i]])
+      //         return res;
+      //     }
+      //
+      //     var updateInterval = 30;
+      //
+      //     var options = {
+      //         series: { shadowSize: 0 }, // drawing is faster without shadows
+      //         yaxis: { min: 0, max: 100 },
+      //         xaxis: { show:false }
+      //     };
+      //     var plot = $.plot($("#flot-realtime"), [ getRandomData() ], options);
+      //     var plot1 = $.plot($("#flot-realtime1"), [ getRandomData() ], options);
+      //
+      //     function update() {
+      //         plot.setData([ getRandomData() ]);
+      //         plot1.setData([ getRandomData() ]);
+      //         // since the axes don't change, we don't need to call plot.setupGrid()
+      //         plot.draw();
+      //         plot1.draw();
+      //
+      //         setTimeout(update, updateInterval);
+      //     }
+      //
+      //     update();
 
       //topu chart
-      var dom = document.getElementById("container");
-      var myChart = echarts.init(dom);
+      var dom1 = document.getElementById("container1");
+      var myChart1 = echarts.init(dom1);
       var app = {};
       option = null;
+      //攻击图
       option = {
           title: {
               text: ''
@@ -283,7 +285,7 @@
               {
                   type: 'graph',
                   layout: 'none',
-                  symbolSize: 70,
+                  symbolSize: 60,
                   roam: true,
                   label: {
                       show: true
@@ -291,28 +293,55 @@
                   edgeSymbol: ['circle', 'arrow'],
                   edgeSymbolSize: [4, 10],
                   edgeLabel: {
-                      fontSize: 20
+                      fontSize: 8
                   },
                   data: [{
-                      name: '攻击节点1',
-                      x: 300,
-                      y: 300
+                      name: '攻击初始点',
+                      x: 550,
+                      y: 100,
+                      itemStyle:{
+                          color:"red"
+                      }
                   }, {
-                      name: '攻击节点2',
-                      x: 800,
-                      y: 300
+                      name: '主机1',
+                      x: 550,
+                      y: 200,
+                      itemStyle:{
+                          color:"grey"
+                      }
                   }, {
-                      name: '目标节点',
+                      name: '主机2',
                       x: 550,
                       y: 300,
                       itemStyle:{
                           color:"grey"
                       }
-                  }, {
-                      name: '攻击节点4',
+                  },
+                  {
+                      name: '主机3',
+                      x: 450,
+                      y: 400,
+                      itemStyle:{
+                          color:"grey"
+                      }
+                  },
+                   {
+                      name: '主机4',
+                      x: 650,
+                      y: 400,
+                      itemStyle:{
+                          color:"grey"
+                      }
+                  },
+                   {
+                      name: '主机5',
                       x: 550,
-                      y: 500
-                  }],
+                      y: 500,
+                      itemStyle:{
+                          color:"grey"
+                      }
+                  },
+                  ],
                   links: [],
                   links: [
                       // {
@@ -334,17 +363,36 @@
                   //     },
                   //     lineStyle: {
                   //         curveness: 0.2
-                  //     }
-                  // },
-                  {
-                      source: '攻击节点1',
-                      target: '目标节点'
-                  }, {
-                      source: '攻击节点2',
-                      target: '目标节点'
-                  },  {source: '攻击节点4',
-                      target: '目标节点'
-                  }],
+                      //     }
+                      // },
+                      {
+                          source: '攻击初始点',
+                          target: '主机1'
+                      }, {
+                          source: '主机1',
+                          target: '主机2'
+                      },
+                       {
+                          source: '主机2',
+                          target: '主机3'
+                      },
+                       {
+                          source: '主机2',
+                          target: '主机4'
+                      },
+                       {
+                          source: '主机3',
+                          target: '主机4'
+                      },
+                       {
+                          source: '主机3',
+                          target: '主机5'
+                      },
+                       {
+                          source: '主机4',
+                          target: '主机5'
+                      },
+                      ],
                   lineStyle: {
                       opacity: 0.9,
                       width: 2,
@@ -352,9 +400,135 @@
                   }
               }
           ]
-      };;
+      };
       if (option && typeof option === "object") {
-          myChart.setOption(option, true);
+          myChart1.setOption(option, true);
+      }
+
+      var dom2 = document.getElementById("container2");
+      var myChart2 = echarts.init(dom2);
+      //攻击路径
+      option = {
+          title: {
+              text: ''
+          },
+          tooltip: {},
+          animationDurationUpdate: 1500,
+          animationEasingUpdate: 'quinticInOut',
+          series: [
+              {
+                  type: 'graph',
+                  layout: 'none',
+                  symbolSize: 60,
+                  roam: true,
+                  label: {
+                      show: true
+                  },
+                  edgeSymbol: ['circle', 'arrow'],
+                  edgeSymbolSize: [4, 10],
+                  edgeLabel: {
+                      fontSize: 8
+                  },
+                  data: [{
+                      name: '攻击初始点',
+                      x: 100,
+                      y: 0,
+                      itemStyle:{
+                          color:"red"
+                      }
+                  }, {
+                      name: '主机1',
+                      x: 200,
+                      y: 0,
+                      itemStyle:{
+                          color:"grey"
+                      }
+                  }, {
+                      name: '主机2',
+                      x: 300,
+                      y: 0,
+                      itemStyle:{
+                          color:"grey"
+                      }
+                  },
+                  {
+                      name: '主机3',
+                      x: 400,
+                      y: 0,
+                      itemStyle:{
+                          color:"grey"
+                      }
+                  },
+
+                   {
+                      name: '主机5',
+                      x: 500,
+                      y: 0,
+                      itemStyle:{
+                          color:"grey"
+                      }
+                  },
+                  ],
+                  links: [
+                      // {
+                  //     source: 0,
+                  //     target: 1,
+                  //     symbolSize: [5, 20],
+                  //     label: {
+                  //         show: true
+                  //     },
+                  //     lineStyle: {
+                  //         width: 5,
+                  //         curveness: 0.2
+                  //     }
+                  // }, {
+                  //     source: '节点2',
+                  //     target: '节点1',
+                  //     label: {
+                  //         show: true
+                  //     },
+                  //     lineStyle: {
+                  //         curveness: 0.2
+                      //     }
+                      // },
+                      {
+                          source: '攻击初始点',
+                          target: '主机1'
+                      }, {
+                          source: '主机1',
+                          target: '主机2'
+                      },
+                       {
+                          source: '主机2',
+                          target: '主机3'
+                      },
+                       {
+                          source: '主机2',
+                          target: '主机4'
+                      },
+                       {
+                          source: '主机3',
+                          target: '主机4'
+                      },
+                       {
+                          source: '主机3',
+                          target: '主机5'
+                      },
+                       {
+                          source: '主机4',
+                          target: '主机5'
+                      },
+                      ],
+                  lineStyle: {
+                      opacity: 0.9,
+                      width: 2,
+                      curveness: 0
+                  }
+              }
+          ]
+      };
+      if (option && typeof option === "object") {
+          myChart2.setOption(option, true);
       }
   })
 </script>

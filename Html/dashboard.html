@@ -2,503 +2,709 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="author" content="order by dede58.com"/>
-  <title>Adminity - Dashboard</title>
-  <link rel="shortcut icon" href="../static/img/favicon.gif">
-  <!---CSS Files-->
-  <link rel="stylesheet" href="../static/css/master.css">
-  <link rel="stylesheet" href="../static/css/iphone-check.css">
-  <link rel="stylesheet" href="../static/css/tables.css">
-  <!---jQuery Files-->
-  <script src="../static/js/jquery-1.7.1.min.js"></script>
-  <script src="../static/js/jquery-ui-1.8.17.min.js"></script>
-  <script src="../static/js/styler.js"></script>
-  <script src="../static/js/jquery.tipTip.js"></script>
-  <script src="../static/js/colorpicker.js"></script>
-  <script src="../static/js/sticky.full.js"></script>
-  <script src="../static/js/global.js"></script>
-  <script src="../static/js/flot/jquery.flot.min.js"></script>
-  <script src="../static/js/flot/jquery.flot.resize.min.js"></script>
-  <script src="../static/js/jquery.dataTables.min.js"></script>
-  <script src="../static/js/forms/iphone-check.js"></script>
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-  <!--[if lte IE 8]>
-  <script language="javascript" type="text/javascript" src="../static/js/flot/excanvas.min.js"></script>
-  <![endif]-->
+    <meta charset="utf-8">
+    <meta name="author" content="order by dede58.com"/>
+    <title>Adminity - Dashboard</title>
+    <link rel="shortcut icon" href="../static/img/favicon.gif">
+    <!---CSS Files-->
+    <link rel="stylesheet" href="../static/css/master.css">
+    <link rel="stylesheet" href="../static/css/iphone-check.css">
+    <link rel="stylesheet" href="../static/css/tables.css">
+    <!---jQuery Files-->
+    <script src="../static/js/jquery-1.7.1.min.js"></script>
+    <script src="../static/js/jquery-ui-1.8.17.min.js"></script>
+    <script src="../static/js/styler.js"></script>
+    <script src="../static/js/jquery.tipTip.js"></script>
+    <script src="../static/js/colorpicker.js"></script>
+    <script src="../static/js/sticky.full.js"></script>
+    <script src="../static/js/global.js"></script>
+    <script src="../static/js/flot/jquery.flot.min.js"></script>
+    <script src="../static/js/flot/jquery.flot.resize.min.js"></script>
+    <script src="../static/js/jquery.dataTables.min.js"></script>
+    <script src="../static/js/forms/iphone-check.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lte IE 8]>
+    <script language="javascript" type="text/javascript" src="../static/js/flot/excanvas.min.js"></script>
+    <![endif]-->
 </head>
 <body>
 
-  <!--- HEADER -->
+<!--- HEADER -->
 
-	<div class="header">
-   <a href="dashboard.html"><span class="head_font">网络攻击平台</span></a>
-   <div class="styler">
-     <ul class="styler-show">
-       <li><div id="colorSelector-top-bar"></div></li>
-       <li><div id="colorSelector-box-head"></div></li>
-     </ul>
-   </div>
-  </div>
+<div class="header">
+    <a href="dashboard.html"><span class="head_font">网络攻击平台</span></a>
+    <div class="styler">
+        <ul class="styler-show">
+            <li>
+                <div id="colorSelector-top-bar"></div>
+            </li>
+            <li>
+                <div id="colorSelector-box-head"></div>
+            </li>
+        </ul>
+    </div>
+</div>
 
-  <div class="top-bar">
-      <ul id="nav">
-        <li id="user-panel">
-          <img src="../static/img/nav/usr-avatar.jpg" id="usr-avatar" alt="" />
-          <div id="usr-info">
-            <p id="usr-name">Welcome back, Michael.</p>
-            <p id="usr-notif">You have 6 notifications. <a href="#">View</a></p>
-            <p><a href="index.html">Log out</a></p>
-          </div>
-        </li>
+<div class="top-bar">
+    <ul id="nav">
+        <!--        <li id="user-panel">-->
+        <!--            <img src="../static/img/nav/usr-avatar.jpg" id="usr-avatar" alt=""/>-->
+        <!--            <div id="usr-info">-->
+        <!--                <p id="usr-name">Welcome back</p>-->
+        <!--                <p id="usr-notif"><a href="#">View</a></p>-->
+        <!--                <p><a href="index.html">Log out</a></p>-->
+        <!--            </div>-->
+        <!--        </li>-->
         <li>
-        <ul id="top-nav">
-         <li class="nav-item">
-           <a href="#"><img src="../static/img/nav/dash-active.png" alt="" /><p>扫描/攻击</p></a>
-         </li>
-         <li class="nav-item">
-           <a href="analytics.html"><img src="../static/img/nav/anlt.png" alt="" /><p>攻击效果</p></a>
-         </li>
-         <li class="nav-item">
-           <a href="tables.html"><img src="../static/img/nav/tb.png" alt="" /><p>操作日志</p></a>
-         </li>
-         <!--<li class="nav-item">-->
-           <!--<a href="calendar.html"><img src="img/nav/cal.png" alt="" /><p>Calendar</p></a>-->
-         <!--</li>-->
-         <!--<li class="nav-item">-->
-           <!--<a href="widgets.html"><img src="img/nav/widgets.png" alt="" /><p>Widgets</p></a>-->
-         <!--</li>-->
-         <!--<li class="nav-item">-->
-           <!--<a href="grid.html"><img src="img/nav/grid.png" alt="" /><p>Grid</p></a>-->
-           <!--<ul class="sub-nav">-->
-            <!--<li><a href="#">12 Columns</a></li>-->
-            <!--<li><a href="#">16 Columns</a></li>-->
-          <!--</ul>-->
-         <!--</li>-->
-         <!--<li class="nav-item">-->
-           <!--<a href="filemanager.html"><img src="img/nav/flm.png" alt="" /><p>File Manager</p></a>-->
-         <!--</li>-->
-         <!--<li class="nav-item">-->
-           <!--<a href="gallery.html"><img src="img/nav/gal.png" alt="" /><p>Gallery</p></a>-->
-         <!--</li>-->
-         <!--<li class="nav-item">-->
-           <!--<a href="icons.html"><img src="img/nav/icn.png" alt="" /><p>Icons</p></a>-->
-         <!--</li>-->
-         <!--<li class="nav-item">-->
-           <!--<a href="#"><img src="img/nav/err.png" alt="" /><p>Error Pages</p></a>-->
-           <!--<ul class="sub-nav">-->
-            <!--<li><a href="403.html">403 Page</a></li>-->
-            <!--<li><a href="404.html">404 Page</a></li>-->
-            <!--<li><a href="503.html">503 Page</a></li>-->
-          <!--</ul>-->
-         <!--</li>-->
-         <!--<li class="nav-item">-->
-           <!--<a href="typography.html"><img src="img/nav/typ.png" alt="" /><p>Typography</p></a>-->
-         <!--</li>-->
-       </ul>
-      </li>
-     </ul>
-  </div>
+            <ul id="top-nav">
+                <li class="nav-item">
+                    <a href="#"><img src="../static/img/nav/dash-active.png" alt=""/>
+                        <p>扫描/攻击</p></a>
+                </li>
+                <li class="nav-item">
+                    <a href="analytics.html"><img src="../static/img/nav/anlt.png" alt=""/>
+                        <p>辅助攻击</p></a>
+                </li>
+                <li class="nav-item">
+                    <a href="log.html"><img src="../static/img/nav/tb.png" alt=""/>
+                        <p>操作日志</p></a>
+                </li>
+                <!--<li class="nav-item">-->
+                <!--<a href="calendar.html"><img src="img/nav/cal.png" alt="" /><p>Calendar</p></a>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                <!--<a href="widgets.html"><img src="img/nav/widgets.png" alt="" /><p>Widgets</p></a>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                <!--<a href="grid.html"><img src="img/nav/grid.png" alt="" /><p>Grid</p></a>-->
+                <!--<ul class="sub-nav">-->
+                <!--<li><a href="#">12 Columns</a></li>-->
+                <!--<li><a href="#">16 Columns</a></li>-->
+                <!--</ul>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                <!--<a href="filemanager.html"><img src="img/nav/flm.png" alt="" /><p>File Manager</p></a>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                <!--<a href="gallery.html"><img src="img/nav/gal.png" alt="" /><p>Gallery</p></a>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                <!--<a href="icons.html"><img src="img/nav/icn.png" alt="" /><p>Icons</p></a>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                <!--<a href="#"><img src="img/nav/err.png" alt="" /><p>Error Pages</p></a>-->
+                <!--<ul class="sub-nav">-->
+                <!--<li><a href="403.html">403 Page</a></li>-->
+                <!--<li><a href="404.html">404 Page</a></li>-->
+                <!--<li><a href="503.html">503 Page</a></li>-->
+                <!--</ul>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                <!--<a href="typography.html"><img src="img/nav/typ.png" alt="" /><p>Typography</p></a>-->
+                <!--</li>-->
+            </ul>
+        </li>
+    </ul>
+</div>
 
-  <!--- CONTENT AREA -->
+<!--- CONTENT AREA -->
 
-  <div class="content container_12">
-      <div class="ad-notif-info grid_12"><p>Welcome to Adminity! You can dismiss me by clicking me!</p></div>
-      <!--<div class="box grid_3">-->
-        <!--<div class="box-head"><h2>Simple Panel</h2></div>-->
-        <!--<div class="box-content">-->
-          <!--<p>This is a simple panel. All panels in Adminity are collapsible by clicking on the header.-->
-          <!--<br>-->
-          <!--Creating a panel like this one is very easy, -->
-          <!--you only need 3 divs with classes 'box', 'box-head' and 'box-content'.-->
-          <!--<br><br>-->
-          <!--Adminity also includes a styler. Open it by clicking the eye icon near the logo. A tooltip will tell you what color each colorpicker changes.<br><br>-->
-          <!--<input type="button" class="button green" value="Read more" />-->
-          <!--</p>-->
-        <!--</div>-->
-      <!--</div>-->
-      <!--<div class="box grid_3">-->
-        <!--<div class="box-head"><span class="box-icon-24 fugue-24 counter"></span><h2>Stats</h2></div>-->
-        <!--<div class="box-content ad-stats">-->
-          <!--<ul>-->
-            <!--<li><h3>21594</h3> Unique Visitors</li>-->
-            <!--<li class="stats-up"><h3>52100</h3> Page Views</li>-->
-            <!--<li class="stats-up"><h3>$2652</h3> Ad Revenue</li>-->
-            <!--<li class="stats-down"><h3>$125</h3> Maintenance Costs</li>-->
-            <!--<li class="stats-up"><h3>+2</h3> Moved up Google</li>-->
-          <!--</ul>-->
-        <!--</div>-->
-      <!--</div>-->
-      <!--<div class="box grid_6">-->
-        <!--<div class="box-head"><span class="box-icon-24 fugue-24 system-monitor"></span><h2>Chart</h2></div>-->
-        <!--<div class="box-content">-->
-          <!--<div id="flot-demo"></div>-->
-        <!--</div>-->
-      <!--</div>-->
-     <div class="box grid_6">
-       <div class="box-head"><h2>扫描</h2></div><div class="box-content">
-          <div class="form-row">
-           <p class="form-label">IP</p><div class="form-item"><input type="text" id="ScanIP"/></div></div><div class="form-row">
-           <p class="form-label">端口</p><div class="form-item"><input type="text" id="ScanPort"/></div></div><div class="form-row">
-<!--           <p class="form-label">Input with Placeholder</p><div class="form-item"><input type="text" placeholder="Placeholder Text" /></div></div><div class="form-row">-->
-<!--           <p class="form-label">Read-only field</p><div class="form-item"><input type="text" value="This field cannot be changed" readonly="readonly" /></div></div><div class="form-row">-->
-<!--           <p class="form-label">Disabled field</p><div class="form-item"><input type="text" disabled="disabled" /></div></div><div class="form-row">-->
-           <p class="form-label">
-            扫描方式</p>
-            <div class="form-item" style="padding-right: 0px">
-              <select id="ScanType">
-                <option value='s1'>HostScan</option>
-                <option value='s2'>PortScan</option>
-                <option value='s3'>VersionScan</option>
-                <option value='s4'>OSScan</option>
-              </select>
-            </div></div><div class="form-row">
+<div class="content container_12">
+<!--    <div class="ad-notif-info grid_12"><p>Welcome! You can dismiss me by clicking me!</p></div>-->
+    <!--<div class="box grid_3">-->
+    <!--<div class="box-head"><h2>Simple Panel</h2></div>-->
+    <!--<div class="box-content">-->
+    <!--<p>This is a simple panel. All panels in Adminity are collapsible by clicking on the header.-->
+    <!--<br>-->
+    <!--Creating a panel like this one is very easy, -->
+    <!--you only need 3 divs with classes 'box', 'box-head' and 'box-content'.-->
+    <!--<br><br>-->
+    <!--Adminity also includes a styler. Open it by clicking the eye icon near the logo. A tooltip will tell you what color each colorpicker changes.<br><br>-->
+    <!--<input type="button" class="button green" value="Read more" />-->
+    <!--</p>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="box grid_3">-->
+    <!--<div class="box-head"><span class="box-icon-24 fugue-24 counter"></span><h2>Stats</h2></div>-->
+    <!--<div class="box-content ad-stats">-->
+    <!--<ul>-->
+    <!--<li><h3>21594</h3> Unique Visitors</li>-->
+    <!--<li class="stats-up"><h3>52100</h3> Page Views</li>-->
+    <!--<li class="stats-up"><h3>$2652</h3> Ad Revenue</li>-->
+    <!--<li class="stats-down"><h3>$125</h3> Maintenance Costs</li>-->
+    <!--<li class="stats-up"><h3>+2</h3> Moved up Google</li>-->
+    <!--</ul>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="box grid_6">-->
+    <!--<div class="box-head"><span class="box-icon-24 fugue-24 system-monitor"></span><h2>Chart</h2></div>-->
+    <!--<div class="box-content">-->
+    <!--<div id="flot-demo"></div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <div class="box grid_6">
+        <div class="box-head"><h2>扫描</h2></div>
+        <div class="box-content" style="height: 305px">
+            <div class="form-row">
+                <p class="form-label">IP</p>
+                <div class="form-item"><input type="text" id="ScanIP"/></div>
+            </div>
+            <div class="form-row">
+                <p class="form-label">端口</p>
+                <div class="form-item"><input type="text" id="ScanPort"/></div>
+            </div>
+            <div class="form-row">
+                <!--           <p class="form-label">Input with Placeholder</p><div class="form-item"><input type="text" placeholder="Placeholder Text" /></div></div><div class="form-row">-->
+                <!--           <p class="form-label">Read-only field</p><div class="form-item"><input type="text" value="This field cannot be changed" readonly="readonly" /></div></div><div class="form-row">-->
+                <!--           <p class="form-label">Disabled field</p><div class="form-item"><input type="text" disabled="disabled" /></div></div><div class="form-row">-->
+                <p class="form-label">
+                    扫描方式</p>
+                <div class="form-item" style="padding-right: 0px">
+                    <select id="ScanType">
+                        <option value='s1'>HostScan</option>
+                        <option value='s2'>PortScan</option>
+                        <option value='s3'>VersionScan</option>
+                        <option value='s4'>OSScan</option>
+                        <option value='s5'>VulScan</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
 
-         <p class="form-label"></p><button id="StartScan" class="button blue small" onclick="SendCommand(0)">开始扫描</button>
-          </div>
-         <div class="clear"></div>
-       </div>
-     </div>
+                <p class="form-label"></p>
+                <button id="StartScan" class="button blue small" onclick="SendCommand(0)">开始扫描</button>
+                <span id="scan_status"></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
 
-     <div class="box grid_6">
-       <div class="box-head"><h2>攻击</h2></div><div class="box-content">
-          <div class="form-row">
-           <p class="form-label">IP</p><div class="form-item"><input type="text" id="AttackIP"/></div></div><div class="form-row">
-           <p class="form-label">端口</p><div class="form-item"><input type="text" id="AttackPort"/></div></div><div class="form-row">
-<!--           <p class="form-label">Input with Placeholder</p><div class="form-item"><input type="text" placeholder="Placeholder Text" /></div></div><div class="form-row">-->
-<!--           <p class="form-label">Read-only field</p><div class="form-item"><input type="text" value="This field cannot be changed" readonly="readonly" /></div></div><div class="form-row">-->
-<!--           <p class="form-label">Disabled field</p><div class="form-item"><input type="text" disabled="disabled" /></div></div><div class="form-row">-->
-           <p class="form-label">
-            攻击方式</p>
-            <div class="form-item" style="padding-right: 0px">
-              <select id="AttackType">
-                <option value='a1'>SYNFlood</option>
-                <option value='a2'>UDPFlood</option>
-                <option value='a3'>ICMPFlood</option>
-                <option value='a4'>ARPCheat</option>
-              </select>
-            </div></div><div class="form-row">
+    <div class="box grid_6">
+        <div class="box-head"><h2>攻击</h2></div>
+        <div class="box-content">
+            <div class="form-row">
+                <p class="form-label">IP</p>
+                <div class="form-item"><input type="text" id="AttackIP"/></div>
+            </div>
+            <div class="form-row">
+                <p class="form-label">端口</p>
+                <div class="form-item"><input type="text" id="AttackPort"/></div>
+            </div>
+            <div class="form-row">
+                <!--           <p class="form-label">Input with Placeholder</p><div class="form-item"><input type="text" placeholder="Placeholder Text" /></div></div><div class="form-row">-->
+                <!--           <p class="form-label">Read-only field</p><div class="form-item"><input type="text" value="This field cannot be changed" readonly="readonly" /></div></div><div class="form-row">-->
+                <!--           <p class="form-label">Disabled field</p><div class="form-item"><input type="text" disabled="disabled" /></div></div><div class="form-row">-->
+                <p class="form-label">攻击方式</p>
+                <div class="form-item" style="padding-right: 0px">
+                    <select id="AttackType">
+                        <option value='a1'>SYNFlood</option>
+                        <option value='a2'>UDPFlood</option>
+                        <option value='a3'>ICMPFlood</option>
+                        <option value='a4'>ARPCheat</option>
+                        <option value='T1'>Trojan</option>
+                        <option value='T2'>WebAttack</option>
+                        <option value='T3'>Overflow</option>
+<!--                        <option value='e'>exploit</option>-->
+                    </select>
 
-         <p class="form-label"></p><button id="StartAttack" class="button blue small" onclick="SendCommand(1)">开始攻击</button>
-          </div>
-         <div class="clear"></div>
-       </div>
-       </div>
-      <div class="box grid_12" >
+
+                </div>
+
+                <p class="form-label"></p>
+                <div class="form-item"></div>
+            </div>
+            <div class="form-row">
+                <p class="form-label">攻击强度</p>
+                <div class="form-item"><input type="text" id="Intensity"/></div>
+            </div>
+            <div class="form-row">
+                <p class="form-label">攻击持续时间</p>
+                <div class="form-item"><input type="text" id="LastTime"/></div>
+            </div>
+            <div class="form-row">
+
+            </div>
+            <div class="form-row">
+
+                <p class="form-label"></p>
+                <button id="StartAttack" class="button blue small" onclick="SendCommand(1)">开始攻击</button>
+                <span id="attack_status"></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="box grid_12">
         <div class="box-head"><h2>扫描结果</h2></div>
         <div class="box-content no-pad">
-        <table class="display" id="example">
-        <thead>
-<!--          <tr>-->
-<!--            <th>Rendering engine</th>-->
-<!--            <th>Browser</th>-->
-<!--            <th>Platform(s)</th>-->
-<!--            <th>Engine version</th>-->
-<!--            <th>CSS grade</th>-->
-<!--          </tr>-->
-        </thead>
-        <tbody>
-<!--          <tr class="odd gradeX">-->
-<!--            <td>Trident</td>-->
-<!--            <td>Internet Explorer 4.0</td>-->
-<!--            <td>Win 95+</td>-->
-<!--            <td class="center"> 4</td>-->
-<!--            <td class="center">X</td>-->
-<!--          </tr>-->
-<!--          <tr class="even gradeC">-->
-<!--            <td>Trident</td>-->
-<!--            <td>Internet Explorer 5.0</td>-->
-<!--            <td>Win 95+</td>-->
-<!--            <td class="center">5</td>-->
-<!--            <td class="center">C</td>-->
-<!--          </tr>-->
-<!--          <tr class="odd gradeA">-->
-<!--            <td>Trident</td>-->
-<!--            <td>Internet Explorer 5.5</td>-->
-<!--            <td>Win 95+</td>-->
-<!--            <td class="center">5.5</td>-->
-<!--            <td class="center">A</td>-->
-<!--          </tr>-->
-<!--          <tr class="even gradeA">-->
-<!--            <td>Trident</td>-->
-<!--            <td>Internet Explorer 6</td>-->
-<!--            <td>Win 98+</td>-->
-<!--            <td class="center">6</td>-->
-<!--            <td class="center">A</td>-->
-<!--          </tr>-->
-<!--          <tr class="odd gradeA">-->
-<!--            <td>Trident</td>-->
-<!--            <td>Internet Explorer 7</td>-->
-<!--            <td>Win XP SP2+</td>-->
-<!--            <td class="center">7</td>-->
-<!--            <td class="center">A</td>-->
-<!--          </tr>-->
-<!--          <tr class="even gradeA">-->
-<!--            <td>Trident</td>-->
-<!--            <td>AOL browser (AOL desktop)</td>-->
-<!--            <td>Win XP</td>-->
-<!--            <td class="center">6</td>-->
-<!--            <td class="center">A</td>-->
-<!--          </tr>-->
-<!--          <tr class="gradeA">-->
-<!--            <td>Gecko</td>-->
-<!--            <td>Firefox 1.0</td>-->
-<!--            <td>Win 98+ / OSX.2+</td>-->
-<!--            <td class="center">1.7</td>-->
-<!--            <td class="center">A</td>-->
-<!--          </tr>-->
-<!--          <tr class="gradeA">-->
-<!--            <td>Gecko</td>-->
-<!--            <td>Firefox 1.5</td>-->
-<!--            <td>Win 98+ / OSX.2+</td>-->
-<!--            <td class="center">1.8</td>-->
-<!--            <td class="center">A</td>-->
-<!--          </tr>-->
-<!--          <tr class="gradeA">-->
-<!--            <td>Gecko</td>-->
-<!--            <td>Firefox 2.0</td>-->
-<!--            <td>Win 98+ / OSX.2+</td>-->
-<!--            <td class="center">1.8</td>-->
-<!--            <td class="center">A</td>-->
-<!--          </tr>-->
-<!--          <tr class="gradeA">-->
-<!--            <td>Gecko</td>-->
-<!--            <td>Firefox 3.0</td>-->
-<!--            <td>Win 2k+ / OSX.3+</td>-->
-<!--            <td class="center">1.9</td>-->
-<!--            <td class="center">A</td>-->
-<!--          </tr>-->
-        </tbody>
-      </table>
+            <table class="display" id="example">
+                <thead>
+                <!--          <tr>-->
+                <!--            <th>Rendering engine</th>-->
+                <!--            <th>Browser</th>-->
+                <!--            <th>Platform(s)</th>-->
+                <!--            <th>Engine version</th>-->
+                <!--            <th>CSS grade</th>-->
+                <!--          </tr>-->
+                </thead>
+                <tbody>
+                <!--          <tr class="odd gradeX">-->
+                <!--            <td>Trident</td>-->
+                <!--            <td>Internet Explorer 4.0</td>-->
+                <!--            <td>Win 95+</td>-->
+                <!--            <td class="center"> 4</td>-->
+                <!--            <td class="center">X</td>-->
+                <!--          </tr>-->
+                <!--          <tr class="even gradeC">-->
+                <!--            <td>Trident</td>-->
+                <!--            <td>Internet Explorer 5.0</td>-->
+                <!--            <td>Win 95+</td>-->
+                <!--            <td class="center">5</td>-->
+                <!--            <td class="center">C</td>-->
+                <!--          </tr>-->
+                <!--          <tr class="odd gradeA">-->
+                <!--            <td>Trident</td>-->
+                <!--            <td>Internet Explorer 5.5</td>-->
+                <!--            <td>Win 95+</td>-->
+                <!--            <td class="center">5.5</td>-->
+                <!--            <td class="center">A</td>-->
+                <!--          </tr>-->
+                <!--          <tr class="even gradeA">-->
+                <!--            <td>Trident</td>-->
+                <!--            <td>Internet Explorer 6</td>-->
+                <!--            <td>Win 98+</td>-->
+                <!--            <td class="center">6</td>-->
+                <!--            <td class="center">A</td>-->
+                <!--          </tr>-->
+                <!--          <tr class="odd gradeA">-->
+                <!--            <td>Trident</td>-->
+                <!--            <td>Internet Explorer 7</td>-->
+                <!--            <td>Win XP SP2+</td>-->
+                <!--            <td class="center">7</td>-->
+                <!--            <td class="center">A</td>-->
+                <!--          </tr>-->
+                <!--          <tr class="even gradeA">-->
+                <!--            <td>Trident</td>-->
+                <!--            <td>AOL browser (AOL desktop)</td>-->
+                <!--            <td>Win XP</td>-->
+                <!--            <td class="center">6</td>-->
+                <!--            <td class="center">A</td>-->
+                <!--          </tr>-->
+                <!--          <tr class="gradeA">-->
+                <!--            <td>Gecko</td>-->
+                <!--            <td>Firefox 1.0</td>-->
+                <!--            <td>Win 98+ / OSX.2+</td>-->
+                <!--            <td class="center">1.7</td>-->
+                <!--            <td class="center">A</td>-->
+                <!--          </tr>-->
+                <!--          <tr class="gradeA">-->
+                <!--            <td>Gecko</td>-->
+                <!--            <td>Firefox 1.5</td>-->
+                <!--            <td>Win 98+ / OSX.2+</td>-->
+                <!--            <td class="center">1.8</td>-->
+                <!--            <td class="center">A</td>-->
+                <!--          </tr>-->
+                <!--          <tr class="gradeA">-->
+                <!--            <td>Gecko</td>-->
+                <!--            <td>Firefox 2.0</td>-->
+                <!--            <td>Win 98+ / OSX.2+</td>-->
+                <!--            <td class="center">1.8</td>-->
+                <!--            <td class="center">A</td>-->
+                <!--          </tr>-->
+                <!--          <tr class="gradeA">-->
+                <!--            <td>Gecko</td>-->
+                <!--            <td>Firefox 3.0</td>-->
+                <!--            <td>Win 2k+ / OSX.3+</td>-->
+                <!--            <td class="center">1.9</td>-->
+                <!--            <td class="center">A</td>-->
+                <!--          </tr>-->
+                </tbody>
+            </table>
         </div>
-      </div>
-  </div>
+    </div>
+</div>
 
 <div class="footer">
-  <p>Powered by Adminity Administration Interface</p>
+    <p>Powered by Zhangchenghui</p>
 </div>
 
 <script> /* SCRIPTS */
-  $(function () {
-      var sin = [], cos = [];
-      for (var i = 0; i < 14; i += 0.5) {
-          sin.push([i, Math.sin(i)]);
-          cos.push([i, Math.cos(i)]);
-      }
-      // var plot = $.plot($("#flot-demo"),
-      //        [ { data: sin, label: "Green", color: "#71a100"}, { data: cos, label: "Blue", color: "#308eef" } ], {
-      //            series: {
-      //                lines: { show: true },
-      //                points: { show: true }
-      //            },
-      //            grid: { hoverable: true },
-      //            yaxis: { min: -1.2, max: 1.2 }
-      //          });
-      var previousPoint = null;
-      $("#flot-demo").bind("plothover", function (event, pos, item) {
-          if ($("#enablePosition:checked").length > 0) {
-              var str = "(" + pos.x.toFixed(2) + ", " + pos.y.toFixed(2) + ")";
-              $("#hoverdata").text(str);
-          }
-      });
+$(function () {
+    var sin = [], cos = [];
+    for (var i = 0; i < 14; i += 0.5) {
+        sin.push([i, Math.sin(i)]);
+        cos.push([i, Math.cos(i)]);
+    }
+    // var plot = $.plot($("#flot-demo"),
+    //        [ { data: sin, label: "Green", color: "#71a100"}, { data: cos, label: "Blue", color: "#308eef" } ], {
+    //            series: {
+    //                lines: { show: true },
+    //                points: { show: true }
+    //            },
+    //            grid: { hoverable: true },
+    //            yaxis: { min: -1.2, max: 1.2 }
+    //          });
+    var previousPoint = null;
+    $("#flot-demo").bind("plothover", function (event, pos, item) {
+        if ($("#enablePosition:checked").length > 0) {
+            var str = "(" + pos.x.toFixed(2) + ", " + pos.y.toFixed(2) + ")";
+            $("#hoverdata").text(str);
+        }
+    });
 
     $('#iphone-check').iphoneStyle();
-  });/* for the flot chart demo */
+});/* for the flot chart demo */
 
-  $('#example').dataTable( {
-      "bJQueryUI": true
-  }); /* For the data tables */
+$('#example').dataTable({
+    "bJQueryUI": true
+}); /* For the data tables */
 /***
  * send command
  * @param OrderType 0:scan 1:attack
  * @constructor
  */
 function SendCommand(OrderType) {
-    if(OrderType==0)
-    {
-        var IP = $("#ScanIP").val();
-        var port = $("#ScanPort").val();
-        var type = $("#ScanType").val();
+
+    var post_data = {
+        "type": "",
+        "ip": "",
+        "port": "",
+        "intensity": "",
+        "lasttime": ""
     }
-    else
-    {
-        var IP = $("#AttackIP").val();
-        var port = $("#AttackPort").val();
-        var type = $("#AttackType").val();
+
+    if (OrderType == 0) {
+        post_data.ip = $("#ScanIP").val();
+        post_data.port = $("#ScanPort").val();
+        post_data.type = $("#ScanType").val();
+        var type = post_data.type;
+        $("#scan_status").html("正在扫描，等待扫描结果...");
+    } else {
+        post_data.ip = $("#AttackIP").val();
+        post_data.port = $("#AttackPort").val();
+        post_data.type = $("#AttackType").val();
+        var type = post_data.type;
+        post_data.intensity = $("#Intensity").val();
+        post_data.lasttime = $("#LastTime").val();
+        $("#attack_status").html("正在攻击");
     }
     $.ajax({
-      type:"POST",
-      url:"/Command/GetCommand",
-      dataType:"json",
-      data:{"arg":JSON.stringify({"type":type,"ip":IP,"port":port})},
-      success:function (data) {
-        if(OrderType == 0)
-        {
-            // switch (type) {
-            //     case "s1":
-            //     case "s2":
-            //     case "s3":
-            //     case "s4":
-            //         var th_tr_html = "<tr>" +
-            //             "<th>downhosts</th>" +
-            //             "<th>elapsed</th>" +
-            //             "<th>timestr</th>" +
-            //             "<th>totalhosts</th>" +
-            //             "<th>uphosts</th>" +
-            //             "</tr>";
-            //         $("#example thead").empty().append(th_tr_html);
-            //         var scanstatus = data.nmap.scanstats;
-            //         var tbody_tr_html = "<tr class='odd'>" +
-            //             "<td>"+scanstatus.downhosts+"</td>" +
-            //             "<td>"+scanstatus.elapsed+"</td>" +
-            //             "<td>"+scanstatus.timestr+"</td>" +
-            //             "<td>"+scanstatus.totalhosts+"</td>" +
-            //             "<td>"+scanstatus.uphosts+"</td>" +
-            //             "</tr>"
-            //         $("#example tbody").empty().append(tbody_tr_html);
-            //         break;
-            // }
-            var th_tr_html = "<tr>" +
-                "<th>addresses</th>" +
-                "<th>mac</th>" +
-                "<th>hostname</th>" +
-                "<th>protocol</th>" +
-                "<th>port</th>" +
-                "</tr>";
-            $("#example thead").empty().append(th_tr_html);
-            var scanres = data.scan;
-            var tbody_tr_html = "";
-            var count = 0;
-            for(let x in scanres)
-            {
-                if(scanres.hasOwnProperty(x))
-                {
-                    count++;
-                    let obj = scanres[x];
-                    if(count%2==0)
-                    {
-                        if(obj.tcp)
-                        {
-                            let obj_tcp = obj.tcp;
-                            let portlist = [];
-                            for(let x in obj_tcp)
-                            {
-                                if(obj_tcp.hasOwnProperty(x))
-                                {
-                                    portlist.push(x);
-                                }
+        type: "POST",
+        url: "/Command/GetCommand",
+        dataType: "json",
+        data: {"arg": JSON.stringify(post_data)},
+        success: function (data) {
+            if (OrderType == 0) {
+                $("#scan_status").html("扫描完成");
+                data = data.data;
+                if (type == "s5") {
+                    var th_tr_html = "<tr>" +
+                        "<th>port</th>" +
+                        "<th>cve</th>" +
+                        // "<th>hostname</th>" +
+                        "<th>cvss-score</th>" +
+                        "<th>reference</th>" +
+                        "<th>How to use</th>" +
+                        "</tr>";
+                    $("#example thead").empty().append(th_tr_html);
+                    var tbody_tr_html = "";
+                    var count = 0;
+                    for (let x of data["vul_data"]) {
+                        count++;
+                        if (count % 2 == 0) {
+                            if (x.length == 4) {
+                                tbody_tr_html += "<tr class='even'>" +
+                                    "<td>" + x[0] + "</td>" +
+                                    "<td>" + x[1] + "</td>" +
+                                    "<td>" + x[2] + "</td>" +
+                                    "<td>" + x[3] + "</td>" +
+                                    "<td></td>" +
+                                    "</tr>";
+                            } else {
+                                tbody_tr_html += "<tr class='even'>" +
+                                    "<td>" + x[0] + "</td>" +
+                                    "<td>" + x[1] + "</td>" +
+                                    "<td>" + x[2] + "</td>" +
+                                    "<td>" + x[3] + "</td>" +
+                                    "<td>" + x[4] + "</td>" +
+                                    "</tr>";
                             }
-                            tbody_tr_html += "<tr class='even'>" +
-                                "<td>"+obj.addresses.ipv4+"</td>" +
-                                "<td>"+obj.addresses.mac+"</td>" +
-                                "<td>"+obj.hostnames[0].name+"</td>" +
-                                "<td>tcp</td>" +
-                                "<td>"+portlist.join(",")+"</td>" +
-                                "</tr>";
-                        }
-                        if(obj.udp)
-                        {
-                            let obj_udp = obj.udp;
-                            let portlist = [];
-                            for(let x in obj_udp)
-                            {
-                                if(obj_udp.hasOwnProperty(x))
-                                {
-                                    portlist.push(x);
-                                }
+
+                        } else {
+                            if (x.length == 4) {
+                                tbody_tr_html += "<tr class='odd'>" +
+                                    "<td>" + x[0] + "</td>" +
+                                    "<td>" + x[1] + "</td>" +
+                                    "<td>" + x[2] + "</td>" +
+                                    "<td>" + x[3] + "</td>" +
+                                    "<td></td>" +
+                                    "</tr>";
+                            } else {
+                                tbody_tr_html += "<tr class='odd'>" +
+                                    "<td>" + x[0] + "</td>" +
+                                    "<td>" + x[1] + "</td>" +
+                                    "<td>" + x[2] + "</td>" +
+                                    "<td>" + x[3] + "</td>" +
+                                    "<td>" + x[4] + "</td>" +
+                                    "</tr>";
                             }
-                            tbody_tr_html += "<tr class='even'>" +
-                                "<td>"+obj.addresses.ipv4+"</td>" +
-                                "<td>"+obj.addresses.mac+"</td>" +
-                                "<td>"+obj.hostnames[0].name+"</td>" +
-                                "<td>udp</td>" +
-                                "<td>"+portlist.join(",")+"</td>" +
-                                "</tr>";
-                        }
-                        if(!obj.tcp&&!obj.udp)
-                        {
-                            tbody_tr_html += "<tr class='even'>" +
-                                "<td>"+obj.addresses.ipv4+"</td>" +
-                                "<td>"+obj.addresses.mac+"</td>" +
-                                "<td>"+obj.hostnames[0].name+"</td>" +
-                                "<td></td>" +
-                                "</tr>";
                         }
 
                     }
-                    else
-                    {
-                        if(obj.tcp)
-                        {
-                            let obj_tcp = obj.tcp;
-                            let portlist = [];
-                            for(let x in obj_tcp)
-                            {
-                                if(obj_tcp.hasOwnProperty(x))
-                                {
-                                    portlist.push(x);
-                                }
-                            }
-                            tbody_tr_html += "<tr class='odd'>" +
-                                "<td>"+obj.addresses.ipv4+"</td>" +
-                                "<td>"+obj.addresses.mac+"</td>" +
-                                "<td>"+obj.hostnames[0].name+"</td>" +
-                                "<td>tcp</td>" +
-                                "<td>"+portlist.join(",")+"</td>" +
-                                "</tr>";
-                        }
-                        if(obj.udp)
-                        {
-                            let obj_udp = obj.udp;
-                            let portlist = [];
-                            for(let x in obj_udp)
-                            {
-                                if(obj_udp.hasOwnProperty(x))
-                                {
-                                    portlist.push(x);
-                                }
-                            }
-                            tbody_tr_html += "<tr class='odd'>" +
-                                "<td>"+obj.addresses.ipv4+"</td>" +
-                                "<td>"+obj.addresses.mac+"</td>" +
-                                "<td>"+obj.hostnames[0].name+"</td>" +
-                                "<td>udp</td>" +
-                                "<td>"+portlist.join(",")+"</td>" +
-                                "</tr>";
-                        }
-                        if(!obj.tcp&&!obj.udp)
-                        {
-                            tbody_tr_html += "<tr class='odd'>" +
-                                "<td>"+obj.addresses.ipv4+"</td>" +
-                                "<td>"+obj.addresses.mac+"</td>" +
-                                "<td>"+obj.hostnames[0].name+"</td>" +
-                                "<td></td>" +
-                                "</tr>";
-                        }
-                    }
+                    $("#example tbody").empty().append(tbody_tr_html);
 
                 }
+                else if (type == "s3") {
+                    var th_tr_html = "<tr>" +
+                        "<th>name</th>" +
+                        "<th>product</th>" +
+                        // "<th>hostname</th>" +
+                        "<th>state</th>" +
+                        "<th>version</th>" +
+                        "<th>ip</th>" +
+                        "<th>port</th>" +
+                        "<th>protocol</th>" +
+                        "</tr>";
+                    $("#example thead").empty().append(th_tr_html);
+                    var tbody_tr_html = "";
+                    var count = 0;
+                    for (let ip in data["scan"]) {
+                        var ip_data = data["scan"][ip];
+                        if (ip_data.hasOwnProperty("tcp")) {
+                            var tcp_data = ip_data["tcp"];
+                            for (port in tcp_data) {
+                                var port_data = tcp_data[port]
+                                count++;
+                                if (count % 2 == 0) {
+                                    tbody_tr_html += "<tr class='even'>" +
+                                        "<td>" + port_data["name"] + "</td>" +
+                                        "<td>" + port_data["product"] + "</td>" +
+                                        "<td>" + port_data["state"] + "</td>" +
+                                        "<td>" + port_data["version"] + "</td>" +
+                                        "<td>" + ip + "</td>" +
+                                        "<td>" + port + "</td>" +
+                                        "<td>tcp</td>" +
+                                        "</tr>";
+
+
+                                } else {
+                                    tbody_tr_html += "<tr class='odd'>" +
+                                        "<td>" + port_data["name"] + "</td>" +
+                                        "<td>" + port_data["product"] + "</td>" +
+                                        "<td>" + port_data["state"] + "</td>" +
+                                        "<td>" + port_data["version"] + "</td>" +
+                                        "<td>" + ip + "</td>" +
+                                        "<td>" + port + "</td>" +
+                                        "<td>tcp</td>" +
+                                        "</tr>";
+
+                                }
+                            }
+
+                        } else if (ip_data.hasOwnProperty("udp")) {
+                            var tcp_data = ip_data["udp"];
+                            for (port in tcp_data) {
+                                var port_data = tcp_data[port]
+                                count++;
+                                if (count % 2 == 0) {
+                                    tbody_tr_html += "<tr class='even'>" +
+                                        "<td>" + port_data["name"] + "</td>" +
+                                        "<td>" + port_data["product"] + "</td>" +
+                                        "<td>" + port_data["state"] + "</td>" +
+                                        "<td>" + port_data["version"] + "</td>" +
+                                        "<td>" + ip + "</td>" +
+                                        "<td>" + port + "</td>" +
+                                        "<td>udp</td>" +
+                                        "</tr>";
+
+
+                                } else {
+                                    tbody_tr_html += "<tr class='odd'>" +
+                                        "<td>" + port_data["name"] + "</td>" +
+                                        "<td>" + port_data["product"] + "</td>" +
+                                        "<td>" + port_data["state"] + "</td>" +
+                                        "<td>" + port_data["version"] + "</td>" +
+                                        "<td>" + ip + "</td>" +
+                                        "<td>" + port + "</td>" +
+                                        "<td>udp</td>" +
+                                        "</tr>";
+
+                                }
+                            }
+
+                        }
+
+
+                    }
+                    $("#example tbody").empty().append(tbody_tr_html);
+                }
+                else if (type == "s4") {
+                    var tbody_tr_html = "";
+                    var th_tr_html = "<tr>" +
+                        "<th>name</th>" +
+                        "<th>accuracy</th>" +
+                        "</tr>";
+                    $("#example thead").empty().append(th_tr_html);
+                    for (let ip in data["scan"]) {
+                        var ip_data = data["scan"][ip];
+                        var osmatch = ip_data["osmatch"];
+
+                        var count = 0;
+                        for (let i in osmatch) {
+                            if (osmatch.hasOwnProperty(i)) {
+                                var os_data = osmatch[i];
+                                count++;
+                                if (count % 2 == 0) {
+                                    tbody_tr_html += "<tr class='even'>" +
+                                        "<td>" + os_data["name"] + "</td>" +
+                                        "<td>" + os_data["accuracy"] + "</td>" +
+                                        "</tr>";
+                                } else {
+                                    tbody_tr_html += "<tr class='odd'>" +
+                                        "<td>" + os_data["name"] + "</td>" +
+                                        "<td>" + os_data["accuracy"] + "</td>" +
+                                        "</tr>";
+                                }
+                            }
+                        }
+
+
+                    }
+                    $("#example tbody").empty().append(tbody_tr_html);
+                }
+                else {
+                    var th_tr_html = "<tr>" +
+                        "<th>addresses</th>" +
+                        "<th>mac</th>" +
+                        // "<th>hostname</th>" +
+                        "<th>protocol</th>" +
+                        "<th>port</th>" +
+                        "</tr>";
+                    $("#example thead").empty().append(th_tr_html);
+                    var scanres = data.scan;
+                    var tbody_tr_html = "";
+                    var count = 0;
+                    for (let x in scanres) {
+                        if (scanres.hasOwnProperty(x)) {
+                            count++;
+                            let obj = scanres[x];
+                            if (count % 2 == 0) {
+                                if (obj.tcp) {
+                                    let obj_tcp = obj.tcp;
+                                    let portlist = [];
+                                    for (let x in obj_tcp) {
+                                        if (obj_tcp.hasOwnProperty(x)) {
+                                            portlist.push(x);
+                                        }
+                                    }
+                                    tbody_tr_html += "<tr class='even'>" +
+                                        "<td>" + obj.addresses.ipv4 + "</td>" +
+                                        "<td>" + obj.addresses.mac + "</td>" +
+                                        // "<td>"+obj.hostnames[0].name+"</td>" +
+                                        "<td>tcp</td>" +
+                                        "<td>" + portlist.join(",") + "</td>" +
+                                        "</tr>";
+                                }
+                                if (obj.udp) {
+                                    let obj_udp = obj.udp;
+                                    let portlist = [];
+                                    for (let x in obj_udp) {
+                                        if (obj_udp.hasOwnProperty(x)) {
+                                            portlist.push(x);
+                                        }
+                                    }
+                                    tbody_tr_html += "<tr class='even'>" +
+                                        "<td>" + obj.addresses.ipv4 + "</td>" +
+                                        "<td>" + obj.addresses.mac + "</td>" +
+                                        // "<td>"+obj.hostnames[0].name+"</td>" +
+                                        "<td>udp</td>" +
+                                        "<td>" + portlist.join(",") + "</td>" +
+                                        "</tr>";
+                                }
+                                if (!obj.tcp && !obj.udp) {
+                                    tbody_tr_html += "<tr class='even'>" +
+                                        "<td>" + obj.addresses.ipv4 + "</td>" +
+                                        "<td>" + obj.addresses.mac + "</td>" +
+                                        // "<td>"+obj.hostnames[0].name+"</td>" +
+                                        "<td></td>" +
+                                        "<td></td>" +
+                                        "</tr>";
+                                }
+
+                            } else {
+                                if (obj.tcp) {
+                                    let obj_tcp = obj.tcp;
+                                    let portlist = [];
+                                    for (let x in obj_tcp) {
+                                        if (obj_tcp.hasOwnProperty(x)) {
+                                            portlist.push(x);
+                                        }
+                                    }
+                                    tbody_tr_html += "<tr class='odd'>" +
+                                        "<td>" + obj.addresses.ipv4 + "</td>" +
+                                        "<td>" + obj.addresses.mac + "</td>" +
+                                        // "<td>"+obj.hostnames[0].name+"</td>" +
+                                        "<td>tcp</td>" +
+                                        "<td>" + portlist.join(",") + "</td>" +
+                                        "</tr>";
+                                }
+                                if (obj.udp) {
+                                    let obj_udp = obj.udp;
+                                    let portlist = [];
+                                    for (let x in obj_udp) {
+                                        if (obj_udp.hasOwnProperty(x)) {
+                                            portlist.push(x);
+                                        }
+                                    }
+                                    tbody_tr_html += "<tr class='odd'>" +
+                                        "<td>" + obj.addresses.ipv4 + "</td>" +
+                                        "<td>" + obj.addresses.mac + "</td>" +
+                                        // "<td>"+obj.hostnames[0].name+"</td>" +
+                                        "<td>udp</td>" +
+                                        "<td>" + portlist.join(",") + "</td>" +
+                                        "</tr>";
+                                }
+                                if (!obj.tcp && !obj.udp) {
+                                    tbody_tr_html += "<tr class='odd'>" +
+                                        "<td>" + obj.addresses.ipv4 + "</td>" +
+                                        "<td>" + obj.addresses.mac + "</td>" +
+                                        // "<td>"+obj.hostnames[0].name+"</td>" +
+                                        "<td></td>" +
+                                        "<td></td>" +
+                                        "</tr>";
+                                }
+                            }
+
+                        }
+                    }
+                    $("#example tbody").empty().append(tbody_tr_html);
+                }
+
+            } else if (OrderType == 1) {
+                $("#attack_status").html("攻击完成");
+                switch (type) {
+                    case "a1":
+                        break;
+                    case "a2":
+                        break;
+                    case "a3":
+                        break;
+                    case "a4":
+                        break;
+                }
             }
-            $("#example tbody").empty().append(tbody_tr_html);
-        }
-        else if(OrderType == 1)
-        {
-            switch (type) {
-                case "a1":
-                    break;
-                case "a2":
-                    break;
-                case "a3":
-                    break;
-                case "a4":
-                    break;
+        },
+        error:function () {
+            if(OrderType==0) {
+                $("#scan_status").html("扫描失败");
+            }
+            else{
+                $("#attack_status").html("攻击失败");
             }
         }
-      }
     })
-  }
+}
 </script>
 
 
